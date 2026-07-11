@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "commit": null,
+  "commit": "5ebce7f",
   "promptFile": "20260711T232251-6412a560a1eb.md",
   "promptSummaryOneLiner": "Merge frontend ops console with backend (data-gen, analytics, cases, docs); resolve package.json keeping deps from both sides and regenerate package-lock.json",
   "timestamp": "2026-07-11T23:22:51+06:00",

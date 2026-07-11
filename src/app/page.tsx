@@ -1,4 +1,5 @@
-import { ArrowRight, ShieldCheck, Waypoints } from "lucide-react";
-import Link from "next/link";
+import { redirect } from "next/navigation";
 
-export default function Home() { return <main className="marketing"><header className="marketing-nav"><Link href="/" className="wordmark">SALRIP</Link><div><Link href="/about">Safety &amp; scope</Link><Link className="button primary" href="/dashboard">Open demo console <ArrowRight size={15}/></Link></div></header><section className="hero"><p>Super Agent Liquidity &amp; Risk Intelligence Platform</p><h1>One pane of glass for every provider, corridor, and agent.</h1><span>Coordinate liquidity pressure, unusual patterns, and operational follow-through without executing a financial transaction.</span><div className="hero-actions"><Link className="button primary" href="/dashboard">Explore the operations console <ArrowRight size={16}/></Link><Link className="button secondary" href="/about">Read prototype guardrails</Link></div></section><section className="marketing-grid"><article><Waypoints/><p>Liquidity context</p><h2>See float and pending positions by provider and corridor.</h2></article><article><ShieldCheck/><p>Explainable review</p><h2>Surface deterministic signals with an evidence-ready trail.</h2></article><article><ArrowRight/><p>Owned action</p><h2>Route the next safe operational step to the right team member.</h2></article></section></main>; }
+export default function Home() {
+  redirect("/dashboard");
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "commit": null,
+  "promptFile": "20260711T233019-7116ab32a230.md",
+  "promptSummaryOneLiner": "Built and wired all 4 frontend screens to the real backend \u2014 /api/overview, /api/alerts, /api/cases \u2014 with full loading/empty/error states, provider-color identity system, and verified end-to-end golden path (promote alert -> real Supabase case -> state machine transitions).",
+  "timestamp": "2026-07-11T23:30:19+06:00",
+  "filesChanged": [
+    "src/app/(app)/alerts/[id]/page.tsx",
+    "src/app/(app)/alerts/page.tsx",
+    "src/app/(app)/cases/page.tsx",
+    "src/app/(app)/dashboard/page.tsx",
+    "src/app/(app)/layout.tsx",
+    "src/app/api/alerts/[id]/route.ts",
+    "src/app/api/alerts/route.ts",
+    "src/app/api/overview/route.ts",
+    "src/app/globals.css",
+    "src/app/layout.tsx",
+    "src/app/page.tsx",
+    "src/components/cases/CaseCard.tsx",
+    "src/components/shell/PageHeader.tsx",
+    "src/components/shell/Sidebar.tsx",
+    "src/components/ui/Badges.tsx",
+    "src/components/ui/Button.tsx",
+    "src/components/ui/Card.tsx",
+    "src/components/ui/Sparkline.tsx",
+    "src/components/ui/States.tsx",
+    "src/components/useApi.ts",
+    "src/lib/alerts/collect.ts",
+    "src/lib/display.ts",
+    "src/lib/overview.ts"
+  ],
+  "agent": "Claude Code"
+}
