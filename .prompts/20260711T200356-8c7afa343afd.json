@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "commit": null,
+  "commit": "f8247b1",
   "promptFile": "20260711T200356-8c7afa343afd.md",
   "promptSummaryOneLiner": "Run npm run explain for real now that both keys are loaded.",
   "timestamp": "2026-07-11T20:03:56+06:00",

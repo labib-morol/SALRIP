@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "commit": null,
+  "promptFile": "20260711T232251-6412a560a1eb.md",
+  "promptSummaryOneLiner": "Merge frontend ops console with backend (data-gen, analytics, cases, docs); resolve package.json keeping deps from both sides and regenerate package-lock.json",
+  "timestamp": "2026-07-11T23:22:51+06:00",
+  "filesChanged": [
+    "package-lock.json",
+    "package.json",
+    "src/app/(ops)/actions/page.tsx",
+    "src/app/(ops)/anomalies/page.tsx",
+    "src/app/(ops)/dashboard/page.tsx",
+    "src/app/(ops)/evidence/page.tsx",
+    "src/app/(ops)/layout.tsx",
+    "src/app/(ops)/liquidity/page.tsx",
+    "src/app/about/page.tsx",
+    "src/app/globals.css",
+    "src/app/layout.tsx",
+    "src/app/page.tsx",
+    "src/components/nav/AppShell.tsx",
+    "src/components/providers/QueryProvider.tsx",
+    "src/components/ui/States.tsx",
+    "src/domain/types.ts",
+    "src/lib/api/client.ts"
+  ],
+  "agent": "Claude Code"
+}
