@@ -7,17 +7,36 @@ import { useApi } from "@/components/useApi";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { Card } from "@/components/ui/Card";
 import { LoadingBlock, ErrorState, EmptyState } from "@/components/ui/States";
-import { SeverityBadge, ProviderMark } from "@/components/ui/Badges";
-import { alertTypeLabel, relativeTime, formatDateTime, ALERT_TYPE_META, type Severity } from "@/lib/display.ts";
+import { SeverityBadge, ProviderMark, ConfidenceBadge } from "@/components/ui/Badges";
+import {
+  alertTypeLabel,
+  relativeTime,
+  formatDateTime,
+  ALERT_TYPE_META,
+  agentArea,
+  alertConfidence,
+  AREAS,
+  type Severity,
+  type Area,
+} from "@/lib/display.ts";
 import type { Provider } from "@/lib/analytics/types.ts";
 import type { AlertView } from "@/lib/alerts/collect.ts";
 
 const PROVIDERS: Array<Provider | "All"> = ["All", "bKash", "Nagad"];
 const SEVERITIES: Array<Severity | "All"> = ["All", "HIGH", "MEDIUM", "LOW"];
+const AREA_OPTIONS: Array<Area | "All"> = ["All", ...AREAS];
+
+const TIME_WINDOWS = [
+  { key: "All", label: "Any time", hours: 0 },
+  { key: "24h", label: "Last 24h", hours: 24 },
+  { key: "7d", label: "Last 7d", hours: 24 * 7 },
+  { key: "30d", label: "Last 30d", hours: 24 * 30 },
+] as const;
+type TimeKey = (typeof TIME_WINDOWS)[number]["key"];
 
 export default function AlertsPage() {
   return (
-    <Suspense fallback={<div className="mx-auto max-w-[1200px] px-8 py-7"><LoadingBlock label="Loading alerts…" /></div>}>
+    <Suspense fallback={<div className="mx-auto max-w-[1200px] px-4 py-5 sm:px-6 lg:px-8 lg:py-7"><LoadingBlock label="Loading alerts…" /></div>}>
       <AlertsView />
     </Suspense>
   );
@@ -28,19 +47,41 @@ function AlertsView() {
   const initialProvider = (search.get("provider") as Provider | null) ?? "All";
   const { data, loading, error, reload } = useApi<{ alerts: AlertView[] }>("/api/alerts");
 
+  const [now] = useState(Date.now);
   const [provider, setProvider] = useState<Provider | "All">(
     PROVIDERS.includes(initialProvider) ? initialProvider : "All",
   );
   const [severity, setSeverity] = useState<Severity | "All">("All");
+  const [area, setArea] = useState<Area | "All">("All");
+  const [agent, setAgent] = useState<string>("All");
+  const [time, setTime] = useState<TimeKey>("All");
 
-  const all = data?.alerts ?? [];
-  const filtered = useMemo(
-    () =>
-      all.filter(
-        (a) => (provider === "All" || a.provider === provider) && (severity === "All" || a.severity === severity),
-      ),
-    [all, provider, severity],
+  const all = useMemo(() => data?.alerts ?? [], [data]);
+  const agents = useMemo(
+    () => Array.from(new Set(all.map((a) => a.agentId))).sort(),
+    [all],
   );
+
+  function clearFilters() {
+    setProvider("All");
+    setSeverity("All");
+    setArea("All");
+    setAgent("All");
+    setTime("All");
+  }
+
+  const filtered = useMemo(() => {
+    const hours = TIME_WINDOWS.find((w) => w.key === time)?.hours ?? 0;
+    const cutoff = hours > 0 ? now - hours * 3600_000 : 0;
+    return all.filter(
+      (a) =>
+        (provider === "All" || a.provider === provider) &&
+        (severity === "All" || a.severity === severity) &&
+        (area === "All" || agentArea(a.agentId) === area) &&
+        (agent === "All" || a.agentId === agent) &&
+        (cutoff === 0 || new Date(a.windowEnd).getTime() >= cutoff),
+    );
+  }, [all, provider, severity, area, agent, time, now]);
 
   return (
     <div>
@@ -50,7 +91,7 @@ function AlertsView() {
         right={!loading && !error ? <span className="text-xs text-muted"><span className="tnum">{all.length}</span> active</span> : null}
       />
 
-      <div className="mx-auto max-w-[1200px] px-8 py-7">
+      <div className="mx-auto max-w-[1200px] px-4 py-5 sm:px-6 lg:px-8 lg:py-7">
         {/* Filters */}
         <div className="mb-5 flex flex-wrap items-center gap-x-6 gap-y-3">
           <FilterGroup label="Provider">
@@ -67,6 +108,34 @@ function AlertsView() {
               </Chip>
             ))}
           </FilterGroup>
+          <FilterGroup label="Area">
+            <Select label="Area" value={area} onChange={(v) => setArea(v as Area | "All")}>
+              {AREA_OPTIONS.map((a) => (
+                <option key={a} value={a}>
+                  {a}
+                </option>
+              ))}
+            </Select>
+          </FilterGroup>
+          <FilterGroup label="Agent">
+            <Select label="Agent" value={agent} onChange={setAgent}>
+              <option value="All">All</option>
+              {agents.map((a) => (
+                <option key={a} value={a}>
+                  {a}
+                </option>
+              ))}
+            </Select>
+          </FilterGroup>
+          <FilterGroup label="Time">
+            <Select label="Time window" value={time} onChange={(v) => setTime(v as TimeKey)}>
+              {TIME_WINDOWS.map((w) => (
+                <option key={w.key} value={w.key}>
+                  {w.label}
+                </option>
+              ))}
+            </Select>
+          </FilterGroup>
         </div>
 
         {loading ? (
@@ -82,15 +151,9 @@ function AlertsView() {
           <EmptyState
             icon={<span className="text-lg">⌕</span>}
             title="No alerts match these filters"
-            message="Try widening the provider or severity filter to see more signals."
+            message="Try widening the provider, severity, area, or agent filter to see more signals."
             action={
-              <button
-                onClick={() => {
-                  setProvider("All");
-                  setSeverity("All");
-                }}
-                className="text-sm font-medium text-brand hover:underline"
-              >
+              <button onClick={clearFilters} className="min-h-11 px-2 text-sm font-medium text-brand hover:underline md:min-h-8">
                 Clear filters
               </button>
             }
@@ -106,7 +169,7 @@ function AlertsView() {
 function AlertsTable({ alerts }: { alerts: AlertView[] }) {
   return (
     <Card className="overflow-hidden">
-      <div className="grid grid-cols-[92px_1fr_120px_150px_96px_28px] items-center gap-4 border-b border-border bg-surface-2 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-wide text-muted">
+      <div className="hidden grid-cols-[92px_minmax(0,1fr)_120px_150px_96px_28px] items-center gap-4 border-b border-border bg-surface-2 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-wide text-muted lg:grid">
         <div>Severity</div>
         <div>Signal</div>
         <div>Provider</div>
@@ -119,22 +182,30 @@ function AlertsTable({ alerts }: { alerts: AlertView[] }) {
           <li key={a.id}>
             <Link
               href={`/alerts/${a.id}`}
-              className="grid grid-cols-[92px_1fr_120px_150px_96px_28px] items-center gap-4 px-5 py-3.5 transition-colors hover:bg-surface-2"
+              className="grid min-h-14 grid-cols-[84px_minmax(0,1fr)_20px] items-center gap-3 px-4 py-3.5 transition-colors hover:bg-surface-2 sm:grid-cols-[92px_minmax(0,1fr)_96px_20px] sm:gap-4 sm:px-5 lg:grid-cols-[92px_minmax(0,1fr)_120px_150px_96px_28px]"
             >
               <div>
                 <SeverityBadge severity={a.severity} />
               </div>
               <div className="min-w-0">
-                <div className="truncate text-sm font-medium text-ink">{alertTypeLabel(a.type)}</div>
+                <div className="flex items-center gap-2">
+                  <span className="truncate text-sm font-medium text-ink">{alertTypeLabel(a.type)}</span>
+                  {alertConfidence(a).level === "reduced" ? <ConfidenceBadge compact /> : null}
+                </div>
                 <div className="mt-0.5 truncate text-xs text-muted">
-                  <span className="tnum">{a.agentId}</span> · {ALERT_TYPE_META[a.type].blurb}
+                  <span className="tnum">{a.agentId}</span> · {agentArea(a.agentId)} · {ALERT_TYPE_META[a.type].blurb}
+                </div>
+                <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted lg:hidden">
+                  <ProviderMark provider={a.provider} />
+                  <span aria-hidden>·</span>
+                  <span>{relativeTime(a.windowEnd)}</span>
                 </div>
               </div>
-              <div>
+              <div className="hidden lg:block">
                 <ProviderMark provider={a.provider} />
               </div>
-              <div className="tnum text-xs text-muted">{formatDateTime(a.windowStart)}</div>
-              <div className="text-xs text-muted">{relativeTime(a.windowEnd)}</div>
+              <div className="tnum hidden text-xs text-muted lg:block">{formatDateTime(a.windowStart)}</div>
+              <div className="hidden text-xs text-muted sm:block">{relativeTime(a.windowEnd)}</div>
               <div className="text-muted-2" aria-hidden>
                 ›
               </div>
@@ -148,9 +219,37 @@ function AlertsTable({ alerts }: { alerts: AlertView[] }) {
 
 function FilterGroup({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-2">
-      <span className="text-xs font-medium uppercase tracking-wide text-muted-2">{label}</span>
-      <div className="flex items-center gap-1.5">{children}</div>
+    <div className="flex flex-wrap items-center gap-2" role="group" aria-label={`${label} filter`}>
+      <span aria-hidden className="text-xs font-medium uppercase tracking-wide text-muted-2">{label}</span>
+      <div className="flex flex-wrap items-center gap-1.5">{children}</div>
+    </div>
+  );
+}
+
+function Select({
+  label,
+  value,
+  onChange,
+  children,
+}: {
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="relative">
+      <select
+        aria-label={`${label} filter`}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="tnum h-11 appearance-none rounded-full border border-border-strong bg-surface pl-3 pr-8 text-xs font-medium text-ink transition-colors hover:bg-surface-2 focus:border-brand focus:outline-none md:h-8"
+      >
+        {children}
+      </select>
+      <span aria-hidden className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-muted-2">
+        ▼
+      </span>
     </div>
   );
 }
@@ -158,8 +257,10 @@ function FilterGroup({ label, children }: { label: string; children: React.React
 function Chip({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
   return (
     <button
+      type="button"
+      aria-pressed={active}
       onClick={onClick}
-      className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+      className={`min-h-11 rounded-full border px-3 py-1 text-xs font-medium transition-colors md:min-h-8 ${
         active
           ? "border-brand bg-brand text-brand-ink"
           : "border-border-strong bg-surface text-muted hover:bg-surface-2"

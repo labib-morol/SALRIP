@@ -1,5 +1,6 @@
 import { findAlert } from "@/lib/alerts/collect.ts";
 import { explainAlert, type Explanation } from "@/lib/explain";
+import { currentPersona } from "@/lib/auth/server.ts";
 
 type Ctx = { params: Promise<{ id: string }> };
 
@@ -15,6 +16,12 @@ export async function GET(_req: Request, ctx: Ctx): Promise<Response> {
   const { id } = await ctx.params;
   const alert = findAlert(id);
   if (!alert) {
+    return Response.json({ error: `Alert not found: ${id}` }, { status: 404 });
+  }
+
+  // Agents may only open their own signals (provider-boundary / least-privilege).
+  const persona = await currentPersona();
+  if (persona?.role === "agent" && alert.agentId !== persona.agentId) {
     return Response.json({ error: `Alert not found: ${id}` }, { status: 404 });
   }
 

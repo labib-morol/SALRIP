@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useApi } from "@/components/useApi";
+import { useRoleGuard } from "@/components/auth/PersonaProvider";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { Card } from "@/components/ui/Card";
 import { Sparkline } from "@/components/ui/Sparkline";
@@ -11,6 +12,7 @@ import { taka, formatDateTime, PROVIDER_META } from "@/lib/display.ts";
 import type { Overview, ProviderOverview, Forecast } from "@/lib/overview.ts";
 
 export default function DashboardPage() {
+  useRoleGuard(["coordinator"]);
   const { data, loading, error, reload } = useApi<Overview>("/api/overview");
 
   return (
@@ -27,7 +29,7 @@ export default function DashboardPage() {
         }
       />
 
-      <div className="mx-auto max-w-[1200px] px-8 py-7">
+      <div className="mx-auto max-w-[1200px] px-4 py-5 sm:px-6 lg:px-8 lg:py-6">
         {loading ? (
           <LoadingBlock rows={4} label="Loading portfolio…" />
         ) : error ? (
@@ -44,7 +46,7 @@ function DashboardBody({ data }: { data: Overview }) {
   return (
     <div className="space-y-6">
       {/* Top row: combined cash + two provider cards */}
-      <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
         <CombinedCashCard data={data} />
         {data.providers.map((p) => (
           <ProviderCard key={p.provider} p={p} />
@@ -59,21 +61,34 @@ function DashboardBody({ data }: { data: Overview }) {
 
 function CombinedCashCard({ data }: { data: Overview }) {
   return (
-    <Card className="relative overflow-hidden p-5">
+    <Card className="p-4">
       <div className="flex items-start justify-between">
         <div>
-          <div className="text-xs font-medium uppercase tracking-wide text-muted">Combined Physical Cash</div>
+          <h2 className="text-xs font-medium uppercase tracking-wide text-muted">Combined Physical Cash</h2>
           <div className="mt-0.5 text-[11px] text-muted-2">Shared pool · {data.agentCount} agents</div>
         </div>
         <span className="rounded-md border border-border bg-surface-2 px-2 py-0.5 text-[11px] font-medium text-muted">
           Pooled
         </span>
       </div>
-      <div className="tnum mt-4 text-3xl font-semibold text-ink">{taka(data.combinedCash)}</div>
+      <div className="tnum mt-3 text-2xl font-semibold text-ink">{taka(data.combinedCash)}</div>
       <div className="mt-3 flex items-end justify-between">
         <ForecastChip forecast={data.cashTrendPct < -0.5 ? "declining" : data.cashTrendPct > 0.5 ? "rising" : "stable"} trendPct={data.cashTrendPct} etaDays={null} />
         <Sparkline data={data.cashSeries} color="var(--brand)" />
       </div>
+      {data.sharedCashRisk.agents > 0 ? (
+        <Link
+          href="/alerts"
+          className="mt-3 flex items-center justify-between rounded-md px-2.5 py-1.5 text-[11px] font-medium transition-colors hover:brightness-95"
+          style={{ color: "var(--sev-high)", background: "var(--sev-high-soft)" }}
+        >
+          <span>
+            <span className="tnum">{data.sharedCashRisk.agents}</span> agent{data.sharedCashRisk.agents > 1 ? "s" : ""} may not
+            cover simultaneous cash-out demand
+          </span>
+          <span aria-hidden>→</span>
+        </Link>
+      ) : null}
     </Card>
   );
 }
@@ -81,28 +96,38 @@ function CombinedCashCard({ data }: { data: Overview }) {
 function ProviderCard({ p }: { p: ProviderOverview }) {
   const meta = PROVIDER_META[p.provider];
   return (
-    <Card className="relative overflow-hidden p-5">
-      {/* provider identity accent bar */}
-      <span className="absolute inset-x-0 top-0 h-1" style={{ background: meta.color }} aria-hidden />
+    <Card className="p-4">
+      <h2 className="sr-only">{p.provider} e-float balance and risk</h2>
       <div className="flex items-start justify-between">
         <ProviderTag provider={p.provider} size="md" />
         {p.activeSignals > 0 ? (
           <Link
             href={`/alerts?provider=${p.provider}`}
-            className="rounded-md border px-2 py-0.5 text-[11px] font-medium transition-colors hover:brightness-95"
+            className="inline-flex min-h-6 items-center rounded-md border px-2 py-0.5 text-[11px] font-medium transition-colors hover:brightness-95"
             style={{ color: "var(--sev-high)", borderColor: "var(--sev-high)", background: "var(--sev-high-soft)" }}
           >
             {p.activeSignals} signal{p.activeSignals > 1 ? "s" : ""}
             {p.highSignals > 0 ? ` · ${p.highSignals} high` : ""}
           </Link>
         ) : (
-          <span className="rounded-md border border-border px-2 py-0.5 text-[11px] font-medium text-ok" style={{ background: "var(--ok-soft)" }}>
+          <span className="inline-flex min-h-6 items-center rounded-md border border-border px-2 py-0.5 text-[11px] font-medium text-ok" style={{ background: "var(--ok-soft)" }}>
             No signals
           </span>
         )}
       </div>
-      <div className="mt-1 text-xs text-muted">e-Float balance</div>
-      <div className="tnum mt-3 text-3xl font-semibold text-ink">{taka(p.float)}</div>
+      <div className="mt-1 flex items-center gap-2 text-xs text-muted">
+        e-Float balance
+        {p.reducedConfidence ? (
+          <span
+            className="inline-flex items-center gap-1 rounded-full border px-1.5 py-0.5 text-[11px] font-medium"
+            style={{ color: "var(--sev-med)", borderColor: "var(--sev-med)", background: "var(--sev-med-soft)" }}
+            title="This balance feed looks delayed — treat the figure as indicative"
+          >
+            <span aria-hidden>◑</span> Feed delayed
+          </span>
+        ) : null}
+      </div>
+      <div className="tnum mt-3 text-2xl font-semibold text-ink">{taka(p.float)}</div>
       <div className="mt-3 flex items-end justify-between">
         <ForecastChip forecast={p.forecast} trendPct={p.trendPct} etaDays={p.etaDays} />
         <Sparkline data={p.series} color={meta.color} />
@@ -125,7 +150,7 @@ function ForecastChip({ forecast, trendPct, etaDays }: { forecast: Forecast; tre
       >
         <span aria-hidden>{map.arrow}</span>
         {map.label}
-        <span className="tnum font-medium opacity-80">
+        <span className="tnum font-medium">
           {trendPct > 0 ? "+" : ""}
           {trendPct}%
         </span>
@@ -152,7 +177,7 @@ function RiskPosture({ data }: { data: Overview }) {
           <h2 className="text-sm font-semibold text-ink">Risk Posture</h2>
           <p className="mt-0.5 text-xs text-muted">Signals awaiting review across the fleet</p>
         </div>
-        <Link href="/alerts" className="text-xs font-medium text-brand hover:underline">
+        <Link href="/alerts" className="inline-flex min-h-6 items-center text-xs font-medium text-brand hover:underline">
           View all alerts →
         </Link>
       </div>
@@ -174,7 +199,7 @@ function RiskPosture({ data }: { data: Overview }) {
               const pct = a.total > 0 ? (row.count / a.total) * 100 : 0;
               return (
                 <div key={row.label} className="flex items-center gap-3">
-                  <div className="w-44 shrink-0 text-sm text-ink">{row.label}</div>
+                  <div className="w-28 shrink-0 truncate text-sm text-ink sm:w-44" title={row.label}>{row.label}</div>
                   <div className="h-2 flex-1 overflow-hidden rounded-full bg-surface-2">
                     <div className="h-full rounded-full bg-brand" style={{ width: `${Math.max(pct, 6)}%` }} />
                   </div>

@@ -1,10 +1,16 @@
 import { collectAlerts } from "@/lib/alerts/collect.ts";
+import { currentPersona } from "@/lib/auth/server.ts";
 
-// GET /api/alerts — every detection alert across all scenarios, id-stamped,
-// sorted most-urgent-first. Thin wrapper over the analytics engine.
+// GET /api/alerts — detection alerts, id-stamped, most-urgent-first. Scoped by
+// persona: an agent sees only their own signals (provider boundaries + least
+// privilege); coordinators, analysts, and management see the full feed.
 export async function GET(): Promise<Response> {
   try {
-    const alerts = collectAlerts();
+    const persona = await currentPersona();
+    let alerts = collectAlerts();
+    if (persona?.role === "agent" && persona.agentId) {
+      alerts = alerts.filter((a) => a.agentId === persona.agentId);
+    }
     return Response.json({ alerts });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Failed to load alerts";

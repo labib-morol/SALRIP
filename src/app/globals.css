@@ -23,7 +23,9 @@
   --ink: #10201e;
   --ink-2: #334744;
   --muted: #5c6f6c;
-  --muted-2: #849794;
+  /* Tertiary text. Darkened from #849794 (only 3.1:1) so de-emphasized 11px
+     metadata clears WCAG AA — 4.97:1 on surface, 4.70:1 on surface-2. */
+  --muted-2: #647370;
 
   /* Brand — vault teal */
   --brand: #0e3a34;
@@ -32,15 +34,20 @@
   --brand-accent: #caa14a; /* brass hairline, used sparingly */
 
   /* Providers */
-  --bkash: #e2136e;
-  --bkash-soft: #fde7f0;
+  /* bKash magenta. Official brand is #E2136E (hue ~334°); nudged the blue
+     channel up (110 -> 128) to hue ~328° so it reads unmistakably magenta
+     against the HIGH-severity red (#C4162B, hue ~353°) at badge size. */
+  --bkash: #e21380;
+  --bkash-soft: #fde7f3;
   --nagad: #f5821f;
   --nagad-soft: #fdeedd;
 
   /* Severity */
   --sev-high: #c4162b;
   --sev-high-soft: #fbe4e6;
-  --sev-med: #b26b00;
+  /* Caution amber. Darkened from #b26b00 (4.2:1) so small severity counts on a
+     white surface clear WCAG AA — 5.5:1 on surface, 4.8:1 on the soft badge. */
+  --sev-med: #985a00;
   --sev-med-soft: #fbeecf;
   --sev-low: #556a74;
   --sev-low-soft: #e7edf0;
@@ -92,6 +99,13 @@
   border-color: var(--border);
 }
 
+/* Designed keyboard focus. Zero-specificity (:where) so components can override. */
+:where(a, button, [role="button"], input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 body {
   background: var(--bg);
   color: var(--ink);
@@ -137,12 +151,13 @@ body {
   animation: shimmer 1.4s infinite;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--border-strong);
-  border-radius: 6px;
-  border: 2px solid var(--bg);
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

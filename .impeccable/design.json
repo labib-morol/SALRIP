@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-12T00:00:00.000Z",
+  "title": "Design System: Vault",
+  "extensions": {
+    "colorMeta": {
+      "brand": { "role": "primary", "displayName": "Vault Teal", "canonical": "#0e3a34", "tonalRamp": ["#061a17", "#0b2b27", "#0e3a34", "#155048", "#1f6a60", "#3f8f83", "#7cb4ab", "#c9e0db"] },
+      "brand-accent": { "role": "primary", "displayName": "Brass Accent", "canonical": "#caa14a", "tonalRamp": ["#2c210a", "#4a3813", "#6d521c", "#957026", "#caa14a", "#dab975", "#e8d3a3", "#f5ecd6"] },
+      "bkash": { "role": "secondary", "displayName": "bKash Magenta", "canonical": "#e21380", "tonalRamp": ["#3d0322", "#6b0a3d", "#9c0e59", "#c31274", "#e21380", "#ec4c9e", "#f489bf", "#fbcfe3"] },
+      "nagad": { "role": "secondary", "displayName": "Nagad Orange", "canonical": "#f5821f", "tonalRamp": ["#3d1e00", "#6b3600", "#9c4f00", "#c86800", "#f5821f", "#f89e52", "#fbbe8b", "#fde4cc"] },
+      "sev-high": { "role": "tertiary", "displayName": "Signal Red", "canonical": "#c4162b", "tonalRamp": ["#340710", "#5e0c1a", "#8a1122", "#c4162b", "#d83a4b", "#e56b78", "#f0a2aa", "#fbdce0"] },
+      "sev-med": { "role": "tertiary", "displayName": "Caution Amber", "canonical": "#985a00", "tonalRamp": ["#2e1c00", "#523100", "#7a4900", "#985a00", "#c07f14", "#d8a244", "#e9c684", "#f6e6c6"] },
+      "sev-low": { "role": "tertiary", "displayName": "Slate", "canonical": "#556a74", "tonalRamp": ["#151b1f", "#232e34", "#354650", "#455962", "#556a74", "#7c8d95", "#a8b4ba", "#dbe2e5"] },
+      "ok": { "role": "tertiary", "displayName": "Confirm Green", "canonical": "#157a4e", "tonalRamp": ["#04180f", "#083019", "#0d4b2b", "#157a4e", "#2b9a68", "#57b587", "#93d1b2", "#d3ecdf"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#10201e", "tonalRamp": ["#10201e", "#233432", "#334744", "#4a5e5b", "#5c6f6c", "#849794", "#c5d0d1", "#eef1f2"] },
+      "border": { "role": "neutral", "displayName": "Hairline Border", "canonical": "#dbe2e3", "tonalRamp": ["#10201e", "#334744", "#5c6f6c", "#849794", "#c5d0d1", "#dbe2e3", "#eef1f2", "#ffffff"] }
+    },
+    "typographyMeta": {
+      "headline": { "displayName": "Headline", "purpose": "Page titles in PageHeader; one per screen." },
+      "title": { "displayName": "Title", "purpose": "Card headers and section titles." },
+      "body": { "displayName": "Body", "purpose": "Default reading text and table cells; prose caps 65-75ch." },
+      "label": { "displayName": "Label", "purpose": "Uppercase column heads, filter labels, badge and eyebrow text." },
+      "data": { "displayName": "Data", "purpose": "Plex Mono tabular figures for money, IDs, counts, timestamps (.tnum)." },
+      "bangla": { "displayName": "Bangla", "purpose": "Bangla explanation copy in Noto Sans Bengali at 1.85 line-height (.bangla)." }
+    },
+    "shadows": [
+      { "name": "card-whisper", "value": "0 1px 2px rgba(16,32,30,0.04)", "purpose": "The only shadow in the system: a near-invisible, ink-tinted lift on cards. Depth otherwise comes from borders and tonal layering." }
+    ],
+    "motion": [
+      { "name": "state-transition", "value": "180ms ease (transition-colors)", "purpose": "Color-only transitions on hover/focus/active for controls. 150-250ms; motion conveys state, never decoration." },
+      { "name": "skeleton-shimmer", "value": "1.4s linear infinite", "purpose": "The single ambient motion: loading skeleton sweep. Suppressed under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single most important action on a surface. Solid Vault Teal.",
+      "html": "<button class=\"ds-btn-primary\">Promote to Case</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 16px; border-radius: 6px; border: 1px solid #0e3a34; background: #0e3a34; color: #eaf3f1; font: 500 14px/1 \"IBM Plex Sans\", system-ui, sans-serif; cursor: pointer; transition: background-color 180ms ease; } .ds-btn-primary:hover { background: #12514a; border-color: #12514a; } .ds-btn-primary:focus-visible { outline: 2px solid #0e3a34; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "The everyday control: surface fill, strong hairline outline.",
+      "html": "<button class=\"ds-btn-secondary\">Reassign</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 16px; border-radius: 6px; border: 1px solid #c5d0d1; background: #ffffff; color: #10201e; font: 500 14px/1 \"IBM Plex Sans\", system-ui, sans-serif; cursor: pointer; transition: background-color 180ms ease; } .ds-btn-secondary:hover { background: #f7f9f9; } .ds-btn-secondary:focus-visible { outline: 2px solid #0e3a34; outline-offset: 2px; }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "A consequential action (never an accusation): bordered Signal Red, not a blaring fill.",
+      "html": "<button class=\"ds-btn-danger\">Resolve &amp; close</button>",
+      "css": ".ds-btn-danger { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 16px; border-radius: 6px; border: 1px solid #c4162b; background: #ffffff; color: #c4162b; font: 500 14px/1 \"IBM Plex Sans\", system-ui, sans-serif; cursor: pointer; transition: background-color 180ms ease; } .ds-btn-danger:hover { background: #fbe4e6; } .ds-btn-danger:focus-visible { outline: 2px solid #c4162b; outline-offset: 2px; }"
+    },
+    {
+      "name": "Provider Tag",
+      "kind": "chip",
+      "refersTo": "provider-tag",
+      "description": "Provider identity (whose money): an outlined, glyph-led named pill. The shape + name is what keeps it distinct from a severity badge.",
+      "html": "<span class=\"ds-provider-tag\"><span class=\"ds-glyph\">◆</span>bKash</span>",
+      "css": ".ds-provider-tag { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border-radius: 9999px; border: 1px solid #e21380; background: #fde7f3; color: #e21380; font: 500 12px/1.4 \"IBM Plex Sans\", system-ui, sans-serif; } .ds-provider-tag .ds-glyph { font-size: 0.7em; line-height: 1; }"
+    },
+    {
+      "name": "Severity Badge",
+      "kind": "chip",
+      "refersTo": "severity-badge",
+      "description": "Severity (how urgent): a filled, dotted, uppercase badge. Structurally distinct from the outlined provider tag; means urgent-to-review, not guilty.",
+      "html": "<span class=\"ds-sev-badge\"><span class=\"ds-dot\"></span>High</span>",
+      "css": ".ds-sev-badge { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border-radius: 6px; background: #fbe4e6; color: #c4162b; font: 600 11px/1.3 \"IBM Plex Sans\", system-ui, sans-serif; letter-spacing: 0.06em; text-transform: uppercase; } .ds-sev-badge .ds-dot { width: 6px; height: 6px; border-radius: 9999px; background: #c4162b; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip-active",
+      "description": "Alerts-list filter pill. Active = solid teal; inactive = surface with hairline outline.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip ds-chip-active\">All</button><button class=\"ds-chip\">bKash</button><button class=\"ds-chip\">Nagad</button></div>",
+      "css": ".ds-chips { display: inline-flex; gap: 6px; } .ds-chip { padding: 4px 12px; border-radius: 9999px; border: 1px solid #c5d0d1; background: #ffffff; color: #5c6f6c; font: 500 12px/1 \"IBM Plex Sans\", system-ui, sans-serif; cursor: pointer; transition: background-color 180ms ease, color 180ms ease; } .ds-chip:hover { background: #f7f9f9; } .ds-chip-active, .ds-chip-active:hover { background: #0e3a34; border-color: #0e3a34; color: #eaf3f1; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "The reading surface: white on the page ground, separated by a hairline border and the single whisper shadow, not elevation.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-title\">Evidence</div><div class=\"ds-card-body\">Signals the detector measured for this window.</div></div>",
+      "css": ".ds-card { border-radius: 10px; border: 1px solid #dbe2e3; background: #ffffff; box-shadow: 0 1px 2px rgba(16,32,30,0.04); padding: 20px; font-family: \"IBM Plex Sans\", system-ui, sans-serif; } .ds-card-title { font: 600 14px/1.4 \"IBM Plex Sans\", system-ui, sans-serif; color: #10201e; } .ds-card-body { margin-top: 4px; font: 400 14px/1.55 \"IBM Plex Sans\", system-ui, sans-serif; color: #5c6f6c; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Vault Room",
+    "overview": "Vault is designed like the back office of a bank, not the front counter. The room is quiet, the light is even, the figures on the ledger are exact, and the only warmth is a thin line of brass. Deep vault-teal owns the chrome; everything else is a calm near-white surface with hairline borders, so the analyst's attention goes to the numbers and the signals, never to the interface. The system is deliberately dense and flat: depth is drawn with 1px borders and tonal layering, not shadow theatrics. Color is rationed hard and split into strictly separate channels: teal is the app's own voice, provider colors say whose money, and severity colors say how urgent, and those channels are never allowed to blur.",
+    "keyCharacteristics": [
+      "Deep vault-teal chrome; calm near-white content surfaces; brass used only as a hairline accent.",
+      "Flat, border-defined depth: hairline borders and tonal layering, not shadow.",
+      "Three separate categorical color channels (brand / provider / severity) that never blur.",
+      "Tabular monospace figures for every monetary or numeric readout.",
+      "Bilingual by construction: English and Bangla at parity, Bangla in a dedicated Bengali face.",
+      "Institutional, precise, calm: the tool disappears into the task."
+    ],
+    "rules": [
+      { "name": "The Three-Channel Rule", "body": "Brand, provider, and severity are three separate color languages and must never be confused. Teal is the product's own voice; provider hues mean whose money and only ever appear as shaped, named tags; severity hues mean how urgent and only ever appear as filled, labelled badges.", "section": "colors" },
+      { "name": "The Rationed Teal Rule", "body": "The brand teal carries chrome, primary action, and selection, nothing decorative. If teal is spreading into content surfaces or standing in for status, it is being overused.", "section": "colors" },
+      { "name": "The Tabular Figure Rule", "body": "Every monetary or numeric readout uses .tnum (Plex Mono + tabular-nums). Numbers that shift horizontally between rows are a defect.", "section": "typography" },
+      { "name": "The Bilingual Parity Rule", "body": "English and Bangla are equals. Bangla renders in Noto Sans Bengali at its own comfortable size and 1.85 line-height, and every alert explanation carries both languages.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces separate by border and tone, not shadow. If you reach for a drop shadow to distinguish two panels, add a hairline border or step the tone to Surface Sunken instead.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the three color channels separate: teal for the product's own voice, provider hues only as shaped named tags, severity hues only as filled labelled badges.",
+      "Do render every monetary or numeric value with .tnum (Plex Mono + tabular figures) so columns align.",
+      "Do show the exact triggering figures on every alert, explainable by construction, never a bare score.",
+      "Do give provider and severity a shape/label difference, not just a color difference, so meaning survives color blindness.",
+      "Do treat Bangla as an equal: Noto Sans Bengali, its own comfortable size and 1.85 line-height, present alongside English.",
+      "Do separate surfaces with 1px borders and tonal layering (Surface over Page Ground over Surface Sunken).",
+      "Do keep body text at Ink/Ink-2 and confirm Muted text clears 4.5:1; honor prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't make it look like a consumer fintech app: no bright gradients, playful mascots, or marketing gloss. This is NOT a consumer app.",
+      "Don't make it an enforcement dashboard: no blaring red alarms, no BLOCKED, no language or color that presumes guilt. Signal Red means urgent to review, not guilty.",
+      "Don't ship a generic admin template: no Bootstrap/Material sea of identical rounded cards with no point of view.",
+      "Don't present a black-box score: never a risk number without the evidence behind it.",
+      "Don't let bKash Magenta drift back toward the official #E2136E if it starts reading as Signal Red at badge size; keep the raised blue channel (#e21380).",
+      "Don't add drop shadows to separate panels; add a border or step the tone instead.",
+      "Don't use display fonts, gradient text, or side-stripe (border-left) accents anywhere; controls stay in the one restrained Plex vocabulary.",
+      "Don't spread the brand teal into content or use it to signal status; ration it to chrome, primary action, and selection."
+    ]
+  }
+}

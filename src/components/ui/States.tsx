@@ -80,7 +80,7 @@ export function ErrorState({
           {onRetry ? (
             <button
               onClick={onRetry}
-              className="mt-3 rounded-md border border-[var(--sev-high)] bg-surface px-3 py-1.5 text-xs font-medium text-[var(--sev-high)] transition-colors hover:bg-white"
+              className="mt-3 min-h-11 rounded-md border border-[var(--sev-high)] bg-surface px-3 py-1.5 text-xs font-medium text-[var(--sev-high)] transition-colors hover:bg-surface md:min-h-8"
             >
               Retry
             </button>

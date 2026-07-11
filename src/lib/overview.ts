@@ -5,8 +5,8 @@
 
 import { loadDataset } from "@/lib/analytics";
 import type { Balance, Cash, Provider } from "@/lib/analytics/types.ts";
-import { collectAlerts } from "@/lib/alerts/collect.ts";
-import { alertTypeLabel } from "@/lib/display.ts";
+import { collectAlerts, type AlertView } from "@/lib/alerts/collect.ts";
+import { alertTypeLabel, agentArea } from "@/lib/display.ts";
 
 const PROVIDERS: Provider[] = ["bKash", "Nagad"];
 /** Baseline = the normal operating portfolio (20 agents, both providers). */
@@ -24,6 +24,14 @@ export interface ProviderOverview {
   etaDays: number | null; // projected days to depletion if declining
   activeSignals: number; // live detection alerts naming this provider
   highSignals: number; // ...of which HIGH severity
+  reducedConfidence: boolean; // a stale/conflicting feed makes this number less certain
+}
+
+/** Portfolio shared-cash risk: agents whose combined multi-provider cash-out
+ *  demand approaches their single physical cash drawer. */
+export interface SharedCashRisk {
+  agents: number;
+  worstMarginBdt: number | null; // most negative headroom across at-risk agents
 }
 
 export interface Overview {
@@ -33,6 +41,7 @@ export interface Overview {
   cashSeries: number[];
   cashTrendPct: number;
   providers: ProviderOverview[];
+  sharedCashRisk: SharedCashRisk;
   alerts: { total: number; high: number; medium: number; low: number; byType: Array<{ label: string; count: number }> };
 }
 
@@ -99,8 +108,15 @@ export function buildOverview(): Overview {
       etaDays,
       activeSignals: providerAlerts.length,
       highSignals: providerAlerts.filter((a) => a.severity === "HIGH").length,
+      reducedConfidence: providerAlerts.some((a) => a.type === "STALE_FEED" || a.evidence.conflict === true),
     };
   });
+
+  const scs = all.filter((a) => a.type === "SHARED_CASH_SHORTAGE");
+  const sharedCashRisk: SharedCashRisk = {
+    agents: new Set(scs.map((a) => a.agentId)).size,
+    worstMarginBdt: scs.length ? Math.min(...scs.map((a) => Number(a.evidence.marginBdt ?? 0))) : null,
+  };
 
   const combinedCash = latestSumByAgent(cash, (r) => r.currentCash);
   const cashSeries = dailyOpeningSeries(cash.map((r) => ({ agentId: r.agentId, timestamp: r.timestamp, opening: r.openingCash })));
@@ -119,5 +135,134 @@ export function buildOverview(): Overview {
     byType: [...byTypeMap.entries()].map(([label, count]) => ({ label, count })).sort((a, b) => b.count - a.count),
   };
 
-  return { asOf, agentCount, combinedCash, cashSeries, cashTrendPct, providers, alerts };
+  return { asOf, agentCount, combinedCash, cashSeries, cashTrendPct, providers, sharedCashRisk, alerts };
+}
+
+// ── Agent-scoped view (§5 "Multi-provider agent") ────────────────────────────
+export interface AgentProvider {
+  provider: Provider;
+  float: number;
+  series: number[];
+  trendPct: number;
+  forecast: Forecast;
+  etaDays: number | null;
+  reducedConfidence: boolean;
+}
+
+export interface AgentOverview {
+  agentId: string;
+  area: string;
+  asOf: string | null;
+  sharedCash: number;
+  cashSeries: number[];
+  cashTrendPct: number;
+  /** Set when this agent's combined cash-out demand approaches their cash drawer. */
+  sharedCashAtRisk: boolean;
+  sharedCashMarginBdt: number | null;
+  providers: AgentProvider[];
+  alerts: AlertView[];
+}
+
+/** One agent's own float per provider, shared physical cash, and their alerts. */
+export function agentOverview(agentId: string): AgentOverview {
+  const ds = loadDataset(PORTFOLIO_SCENARIO);
+  const bal = ds.balances.filter((b) => b.agentId === agentId);
+  const cash = ds.cash.filter((c) => c.agentId === agentId);
+  const asOf = bal.reduce<string | null>((mx, b) => (mx && mx > b.timestamp ? mx : b.timestamp), null);
+
+  const alerts = collectAlerts().filter((a) => a.agentId === agentId);
+
+  const providers: AgentProvider[] = PROVIDERS.map((provider) => {
+    const rows = bal.filter((b) => b.provider === provider).sort((a, b) => a.timestamp.localeCompare(b.timestamp));
+    const float = rows.length ? rows[rows.length - 1].currentBalance : 0;
+    const series = dailyOpeningSeries(rows.map((r) => ({ agentId, timestamp: r.timestamp, opening: r.openingBalance })));
+    const { trendPct, forecast, etaDays } = classify(series);
+    const reducedConfidence = alerts.some(
+      (a) => a.provider === provider && (a.type === "STALE_FEED" || a.evidence.conflict === true),
+    );
+    return { provider, float, series, trendPct, forecast, etaDays, reducedConfidence };
+  });
+
+  const cashSorted = [...cash].sort((a, b) => a.timestamp.localeCompare(b.timestamp));
+  const sharedCash = cashSorted.length ? cashSorted[cashSorted.length - 1].currentCash : 0;
+  const cashSeries = dailyOpeningSeries(cash.map((c) => ({ agentId, timestamp: c.timestamp, opening: c.openingCash })));
+  const cashTrendPct = classify(cashSeries).trendPct;
+
+  const scs = alerts.filter((a) => a.type === "SHARED_CASH_SHORTAGE");
+  const sharedCashAtRisk = scs.length > 0;
+  const sharedCashMarginBdt = scs.length ? Number(scs[0].evidence.marginBdt ?? 0) : null;
+
+  return {
+    agentId,
+    area: agentArea(agentId),
+    asOf,
+    sharedCash,
+    cashSeries,
+    cashTrendPct,
+    sharedCashAtRisk,
+    sharedCashMarginBdt,
+    providers,
+    alerts,
+  };
+}
+
+// ── Management-scoped view (§5 "Management") ──────────────────────────────────
+export interface AreaRow {
+  area: string;
+  agentCount: number;
+  total: number;
+  high: number;
+  medium: number;
+  low: number;
+  topProblem: string | null;
+}
+
+export interface ManagementOverview {
+  asOf: string | null;
+  areas: AreaRow[];
+  byType: Array<{ label: string; count: number }>;
+  totals: { agents: number; signals: number; high: number };
+}
+
+/** Area-level rollup: service risk by area, recurring problems, readiness. */
+export function managementOverview(): ManagementOverview {
+  const ds = loadDataset(PORTFOLIO_SCENARIO);
+  const agentIds = [...new Set(ds.balances.map((b) => b.agentId))];
+  const asOf = ds.balances.reduce<string | null>((mx, b) => (mx && mx > b.timestamp ? mx : b.timestamp), null);
+  const all = collectAlerts();
+
+  const areaAgents = new Map<string, Set<string>>();
+  for (const id of agentIds) {
+    const ar = agentArea(id);
+    (areaAgents.get(ar) ?? areaAgents.set(ar, new Set()).get(ar)!).add(id);
+  }
+
+  const areas: AreaRow[] = [...areaAgents.entries()]
+    .map(([area, ids]) => {
+      const aa = all.filter((a) => agentArea(a.agentId) === area);
+      const byType = new Map<string, number>();
+      for (const x of aa) byType.set(alertTypeLabel(x.type), (byType.get(alertTypeLabel(x.type)) ?? 0) + 1);
+      const topProblem = [...byType.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
+      return {
+        area,
+        agentCount: ids.size,
+        total: aa.length,
+        high: aa.filter((a) => a.severity === "HIGH").length,
+        medium: aa.filter((a) => a.severity === "MEDIUM").length,
+        low: aa.filter((a) => a.severity === "LOW").length,
+        topProblem,
+      };
+    })
+    .sort((a, b) => b.high - a.high || b.total - a.total || a.area.localeCompare(b.area));
+
+  const byTypeMap = new Map<string, number>();
+  for (const a of all) byTypeMap.set(alertTypeLabel(a.type), (byTypeMap.get(alertTypeLabel(a.type)) ?? 0) + 1);
+  const byType = [...byTypeMap.entries()].map(([label, count]) => ({ label, count })).sort((a, b) => b.count - a.count);
+
+  return {
+    asOf,
+    areas,
+    byType,
+    totals: { agents: agentIds.length, signals: all.length, high: all.filter((a) => a.severity === "HIGH").length },
+  };
 }

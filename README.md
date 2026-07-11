@@ -53,9 +53,14 @@ Three grounded capabilities, each verifiable against real code and data:
   into a case with an SLA, moves it through a validated state machine, and records an
   immutable audit trail in Supabase.
 
-A Next.js operations console (`src/app/`) presents the liquidity, anomaly, action, and
-evidence surfaces on top of these. See **Project status** below for exactly what is
-wired end-to-end today versus what runs as a proven offline harness.
+A Next.js **role-based console** (`src/app/`) presents these on top: a password-less
+persona picker signs you in as one of four stakeholders from the rulebook (§5) — **Super
+Agent**, **Ops Coordinator**, **Risk & Compliance Analyst**, or **Management** — and the
+whole app re-scopes. An agent sees only their own float, shared cash, and alerts (enforced
+server-side) with a plain-language bilingual advisory; the coordinator sees the full
+portfolio and drives the Case Board; the analyst reviews and escalates but cannot make the
+final call; management sees an area-level rollup. See **Project status** below for what is
+wired end-to-end.
 
 ## Validation results
 
@@ -151,7 +156,9 @@ Versions are the exact ranges declared in `package.json`.
 - **React `19.2.4`** / **React DOM `19.2.4`**.
 - **TypeScript `^5`** — strict domain types throughout (`src/domain/`, `src/lib/*/types.ts`).
 - **Tailwind CSS `^4`** (via `@tailwindcss/postcss`) plus a hand-authored design layer
-  in `src/app/globals.css` (editorial serif + paper/ochre palette).
+  in `src/app/globals.css` — the institutional **"Vault"** system: deep vault-teal identity,
+  strictly separate provider (magenta/orange) vs. severity (red/amber/slate) color channels,
+  IBM Plex Sans/Mono + Noto Sans Bengali. Captured in [DESIGN.md](./DESIGN.md).
 
 **Data fetching & UI**
 - **`@tanstack/react-query` `^5`** — client-side data fetching / caching for the console pages.
@@ -188,27 +195,37 @@ Grounded and honest, because the rulebook rewards it:
 | Synthetic data generator (seeded, reproducible) | **Working** | `scripts/datagen/`, `npm run generate` |
 | Detection engine + eval harness (100% recall / 0% FPR) | **Working, verified** | `src/lib/analytics/`, `npm run analyze` |
 | Bilingual explainer + no-"fraud" guard | **Working** (guard always; live call needs key) | `src/lib/explain/`, `npm run explain` |
-| Case workflow (state machine + audit trail) | **Working over HTTP**, verified end-to-end | `src/lib/cases/`, `/api/cases`, Supabase |
-| Console UI shell (dashboard, anomalies, liquidity, actions, evidence) | **Rendered**, with loading/empty/error states | `src/app/(ops)/` |
-| Console data endpoints (`/api/dashboard`, `/api/liquidity`, `/api/anomalies`, `/api/actions`, `/api/evidence`) | **Not yet implemented** | the pages call them via `src/lib/api/client.ts`; today they surface the "backend unavailable" state |
+| Case workflow (state machine + audit trail + notes) | **Working over HTTP**, verified end-to-end | `src/lib/cases/`, `/api/cases`, Supabase |
+| Role-based console (persona login + 4 scoped roles) | **Working** | `src/app/login/`, `src/app/(app)/`, `src/lib/auth/` |
+| Console read endpoints (overview / alerts / me / management) | **Working — wired to the engine** | `src/app/api/*/route.ts`, `src/lib/overview.ts`, `src/lib/alerts/collect.ts` |
 
-In other words: the **analytics and explainer are proven against labelled data as
-offline harnesses**, the **case workflow is live over HTTP**, and the **console is a
-designed shell** whose read endpoints are the clear next integration step (wire
-`analyze()` output through `/api/*` into the existing React Query pages).
+In other words: the **analytics and explainer are proven against labelled data** (both as
+offline harnesses *and* through the live read endpoints), the **console is fully wired and
+role-scoped**, and the **case workflow is live over HTTP** — promoting, assigning,
+escalating, resolving, and adding notes all persist to Supabase with an immutable audit
+trail. The one part that is *intentionally* read-only is the analytics itself: balances and
+alerts are recomputed from the seeded synthetic datasets on every request (no real
+transactions are ever written), while the database is the system of record for the human
+coordination decisions.
 
 ## Repository layout
 
 ```
 src/
-  app/                     Next.js App Router: marketing (/) + (ops) console + /api/cases
-  domain/types.ts          Shared UI-facing domain types
+  app/
+    login/                 Persona picker (no credentials)
+    (app)/                 Role-scoped console: my-operation · dashboard · alerts · cases · management
+    api/                   Route Handlers: overview · alerts · me · management · cases
+  components/              UI primitives, shell (sidebar/header), auth provider, case card
   lib/
     analytics/             Detection engine: signals, baseline, detectors, evaluator
+    alerts/collect.ts      Run the engine over all scenarios → id-stamped alert feed
+    overview.ts            Portfolio / agent / management aggregations for the read endpoints
+    auth/                  Personas, role definitions, server-side currentPersona()
     explain/               OpenAI bilingual explainer + prompt + no-"fraud" guard
     cases/                 Case state machine, promote, Supabase repo
     supabase/server.ts     Server-side (service-role) Supabase client
-    api/client.ts          Typed frontend API client for the console pages
+    display.ts             Neutral labels, formatters, confidence, area, agent advisory
 scripts/
   datagen/                 Seeded synthetic data generator (config, core, scenarios, rng)
   analyze.ts               Runs the engine over every dataset, prints recall/FPR

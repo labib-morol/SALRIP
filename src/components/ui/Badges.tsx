@@ -56,7 +56,7 @@ export function SeverityBadge({ severity }: { severity: Severity }) {
 const STATUS_STYLE: Record<CaseStatus, { color: string; bg: string; border: string }> = {
   Open: { color: "var(--muted)", bg: "transparent", border: "var(--border-strong)" },
   Assigned: { color: "var(--brand)", bg: "var(--surface-2)", border: "var(--brand)" },
-  Acknowledged: { color: "#1f5f8b", bg: "#e8f1f8", border: "#1f5f8b" },
+  Acknowledged: { color: "var(--ink-2)", bg: "var(--surface-2)", border: "var(--border-strong)" },
   Escalated: { color: "var(--sev-high)", bg: "var(--sev-high-soft)", border: "var(--sev-high)" },
   Resolved: { color: "var(--ok)", bg: "var(--ok-soft)", border: "var(--ok)" },
 };
@@ -75,4 +75,26 @@ export function StatusPill({ status }: { status: CaseStatus }) {
 
 export function AlertTypeLabel({ type, className }: { type: AlertType; className?: string }) {
   return <span className={className}>{alertTypeLabel(type)}</span>;
+}
+
+/**
+ * Reliability marker. Only rendered when confidence is reduced (a high-confidence
+ * alert needs no badge) — a striped amber pill that reads as a caveat, visually
+ * distinct from the solid severity badge and the outlined status pill.
+ */
+export function ConfidenceBadge({ compact = false }: { compact?: boolean }) {
+  return (
+    <span
+      className={`inline-flex items-center gap-1.5 rounded-full border font-semibold uppercase tracking-wide ${
+        compact ? "px-1.5 py-0.5 text-[11px]" : "px-2.5 py-1 text-[11px]"
+      }`}
+      style={{ color: "var(--sev-med)", borderColor: "var(--sev-med)", background: "var(--sev-med-soft)" }}
+      title="Provider data was late or conflicting during this window"
+    >
+      <span aria-hidden className="text-[0.85em] leading-none">
+        ◑
+      </span>
+      Reduced confidence
+    </span>
+  );
 }

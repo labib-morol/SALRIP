@@ -16,12 +16,14 @@ export function useApi<T>(url: string): ApiState<T> {
   const [error, setError] = useState<string | null>(null);
   const [nonce, setNonce] = useState(0);
 
-  const reload = useCallback(() => setNonce((n) => n + 1), []);
+  const reload = useCallback(() => {
+    setLoading(true);
+    setError(null);
+    setNonce((n) => n + 1);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
-    setLoading(true);
-    setError(null);
     fetch(url)
       .then(async (res) => {
         const body = await res.json().catch(() => ({}));

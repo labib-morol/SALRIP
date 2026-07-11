@@ -1,11 +1,16 @@
 import type { ReactNode } from "react";
-import { Sidebar } from "@/components/shell/Sidebar";
+import { redirect } from "next/navigation";
+import { AppShell } from "@/components/shell/AppShell";
+import { PersonaProvider } from "@/components/auth/PersonaProvider";
+import { currentPersona } from "@/lib/auth/server.ts";
 
-export default function AppLayout({ children }: { children: ReactNode }) {
+export default async function AppLayout({ children }: { children: ReactNode }) {
+  const persona = await currentPersona();
+  if (!persona) redirect("/login");
+
   return (
-    <div className="flex h-screen overflow-hidden bg-bg">
-      <Sidebar />
-      <main className="flex-1 overflow-y-auto">{children}</main>
-    </div>
+    <PersonaProvider persona={persona}>
+      <AppShell persona={persona}>{children}</AppShell>
+    </PersonaProvider>
   );
 }

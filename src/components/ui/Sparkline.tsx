@@ -19,17 +19,12 @@ export function Sparkline({
   const pts = data.map((v, i) => `${pad + i * step},${y(v)}`);
   const line = pts.map((p, i) => (i === 0 ? `M${p}` : `L${p}`)).join(" ");
   const area = `${line} L${pad + (data.length - 1) * step},${height} L${pad},${height} Z`;
-  const gid = `sg-${Math.abs(data.reduce((a, b) => a + b, 0)).toString(36)}`;
 
+  // Flat, low-opacity fill instead of a gradient — reads as a measured trend
+  // line, not a marketing chart.
   return (
     <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} aria-hidden className="overflow-visible">
-      <defs>
-        <linearGradient id={gid} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor={color} stopOpacity="0.18" />
-          <stop offset="100%" stopColor={color} stopOpacity="0" />
-        </linearGradient>
-      </defs>
-      <path d={area} fill={`url(#${gid})`} />
+      <path d={area} fill={color} fillOpacity={0.06} />
       <path d={line} fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       <circle cx={pad + (data.length - 1) * step} cy={y(data[data.length - 1])} r="2" fill={color} />
     </svg>

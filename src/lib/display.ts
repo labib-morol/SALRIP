@@ -41,6 +41,101 @@ export function alertTypeLabel(type: AlertType): string {
   return ALERT_TYPE_META[type]?.label ?? "Activity to Review";
 }
 
+// ── Confidence ───────────────────────────────────────────────────────────────
+// A reliability signal for the analyst: not every alert is measured on equally
+// firm ground. A STALE_FEED alert (and anything whose reconciliation `conflict`
+// flag is set) rests on provider data that was late or disagreed with the
+// ledger during the window, so its numbers deserve a visible caveat rather than
+// being read as hard fact. This is a non-functional (reliability) requirement.
+export type ConfidenceLevel = "high" | "reduced";
+
+export interface ConfidenceAssessment {
+  level: ConfidenceLevel;
+  /** Short human reason, present only when confidence is reduced. */
+  reason: string | null;
+}
+
+export function alertConfidence(alert: {
+  type: AlertType;
+  evidence: Record<string, number | string | boolean>;
+}): ConfidenceAssessment {
+  const conflict = alert.evidence.conflict === true;
+  if (alert.type === "STALE_FEED") {
+    return {
+      level: "reduced",
+      reason: conflict
+        ? "The balance feed stopped advancing while transactions kept posting, so the reported figures conflicted with the ledger during this window."
+        : "The balance feed stopped advancing during this window, so the reported figures may lag the agent's true position.",
+    };
+  }
+  if (conflict) {
+    return {
+      level: "reduced",
+      reason: "Provider data was late or conflicted with the ledger during this window.",
+    };
+  }
+  return { level: "high", reason: null };
+}
+
+// ── Agent-facing advisory (§9 inclusive agent-side communication) ────────────
+// A plain-language, bilingual nudge for the agent's own screen, in the spirit of
+// the rulebook's illustrative Bangla alerts. Deterministic (no model call), so it
+// always works offline. Never accusatory: it describes, reassures, and suggests a
+// safe next step — the machine never makes a determination.
+export interface AgentAdvisory {
+  title: string;
+  english: string;
+  bangla: string;
+}
+
+export function agentAdvisory(alert: {
+  type: AlertType;
+  provider: Provider;
+  evidence: Record<string, number | string | boolean>;
+}): AgentAdvisory {
+  const p = alert.provider;
+  switch (alert.type) {
+    case "LIQUIDITY_DRAIN":
+      return {
+        title: "Your float is trending down",
+        english: `Your ${p} balance has been falling over the last few days. At this pace it could run low soon. Consider topping up your ${p} float from HQ before your busy hours so you don't have to turn customers away.`,
+        bangla: `গত কয়েকদিনে আপনার ${p} ব্যালেন্স কমছে। এই ধারায় চললে শীঘ্রই কমে যেতে পারে। গ্রাহক ফেরানো এড়াতে ব্যস্ত সময়ের আগে এইচকিউ থেকে আপনার ${p} ফ্লোট বাড়িয়ে নেওয়ার পরামর্শ দেওয়া হচ্ছে।`,
+      };
+    case "SHARED_CASH_SHORTAGE":
+      return {
+        title: "Cash-out demand is close to your cash on hand",
+        english: `Cash-out requests across both providers together are approaching the physical cash in your drawer. To keep serving customers smoothly, keep some extra cash ready.`,
+        bangla: `দুই প্রোভাইডার মিলিয়ে ক্যাশ-আউটের চাহিদা আপনার হাতে থাকা নগদের কাছাকাছি পৌঁছেছে। নিরবচ্ছিন্নভাবে সেবা দিতে কিছু অতিরিক্ত নগদ প্রস্তুত রাখার পরামর্শ দেওয়া হচ্ছে।`,
+      };
+    case "STALE_FEED":
+      return {
+        title: "Your balance feed looks delayed",
+        english: `Your ${p} balance feed has not updated recently, so the figure shown may not be current. Please check it against your own records before relying on it — this is a data delay, not a problem with your account.`,
+        bangla: `আপনার ${p} ব্যালেন্স ফিড সম্প্রতি আপডেট হয়নি, তাই দেখানো সংখ্যা এই মুহূর্তের নাও হতে পারে। নির্ভর করার আগে নিজের হিসাবের সাথে মিলিয়ে নিন — এটি ডেটা দেরির সমস্যা, আপনার অ্যাকাউন্টের কোনো সমস্যা নয়।`,
+      };
+    case "FRAUD_BURST":
+      return {
+        title: "An unusual burst of similar transactions",
+        english: `A short run of very similar transactions was flagged for review. Nothing has been blocked and no action has been taken — please just confirm these transactions are genuine.`,
+        bangla: `খুব একই রকম কিছু লেনদেনের একটি ছোট ঝাঁক পর্যালোচনার জন্য চিহ্নিত হয়েছে। কিছুই বন্ধ করা হয়নি এবং কোনো ব্যবস্থা নেওয়া হয়নি — অনুগ্রহ করে শুধু নিশ্চিত করুন লেনদেনগুলো আসল কিনা।`,
+      };
+  }
+}
+
+// ── Area ─────────────────────────────────────────────────────────────────────
+// The generator assigns every agent a fixed operating area, but that field isn't
+// carried through into the runtime feed (transactions/balances/cash hold only
+// agentId). We derive a stable area from the agent id so the same agent always
+// maps to the same area — enough to support the recommended "filter by area".
+export const AREAS = ["Dhaka–Gulshan", "Dhaka–Mirpur", "Chattogram", "Sylhet", "Khulna"] as const;
+export type Area = (typeof AREAS)[number];
+
+export function agentArea(agentId: string): Area {
+  let h = 0;
+  for (let i = 0; i < agentId.length; i++) h = (Math.imul(h, 31) + agentId.charCodeAt(i)) >>> 0;
+  return AREAS[h % AREAS.length];
+}
+
 // ── Providers ──────────────────────────────────────────────────────────────
 export interface ProviderMeta {
   name: Provider;

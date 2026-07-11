@@ -4,12 +4,23 @@ import { useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useApi } from "@/components/useApi";
+import { usePersona } from "@/components/auth/PersonaProvider";
+import { ROLES } from "@/lib/auth/personas.ts";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { Card, CardHeader } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { LoadingBlock, ErrorState, EmptyState, InlineBanner } from "@/components/ui/States";
-import { SeverityBadge, ProviderTag } from "@/components/ui/Badges";
-import { alertTypeLabel, humaniseKey, taka, formatDateTime, relativeTime, ALERT_TYPE_META } from "@/lib/display.ts";
+import { SeverityBadge, ProviderTag, ConfidenceBadge } from "@/components/ui/Badges";
+import {
+  alertTypeLabel,
+  humaniseKey,
+  taka,
+  formatDateTime,
+  relativeTime,
+  ALERT_TYPE_META,
+  alertConfidence,
+  agentArea,
+} from "@/lib/display.ts";
 import type { Explanation } from "@/lib/explain";
 import type { AlertView } from "@/lib/alerts/collect.ts";
 
@@ -36,7 +47,7 @@ export default function AlertDetailPage() {
         description={data ? ALERT_TYPE_META[data.alert.type].blurb : undefined}
       />
 
-      <div className="mx-auto max-w-[1200px] px-8 py-7">
+      <div className="mx-auto max-w-[1200px] px-4 py-5 sm:px-6 lg:px-8 lg:py-7">
         {loading ? (
           <LoadingBlock rows={5} label="Generating bilingual explanation…" />
         ) : error ? (
@@ -64,9 +75,13 @@ export default function AlertDetailPage() {
 
 function AlertDetail({ data }: { data: DetailResponse }) {
   const { alert, explanation, explainError } = data;
+  const confidence = alertConfidence(alert);
 
   return (
-    <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_340px]">
+    <div className="space-y-6">
+      {confidence.level === "reduced" ? <ReducedConfidenceBanner reason={confidence.reason} /> : null}
+
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_340px]">
       {/* Main column */}
       <div className="space-y-6">
         <Card>
@@ -105,9 +120,9 @@ function AlertDetail({ data }: { data: DetailResponse }) {
           <CardHeader title="Evidence" subtitle="Signals the detector measured for this window" />
           <dl className="divide-y divide-border">
             {Object.entries(alert.evidence).map(([key, value]) => (
-              <div key={key} className="flex items-center justify-between gap-4 px-5 py-3">
+              <div key={key} className="flex flex-col gap-1 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
                 <dt className="text-sm text-muted">{humaniseKey(key)}</dt>
-                <dd className="tnum text-sm font-medium text-ink">{formatEvidenceValue(key, value)}</dd>
+                <dd className="tnum break-words text-sm font-medium text-ink sm:text-right">{formatEvidenceValue(key, value)}</dd>
               </div>
             ))}
           </dl>
@@ -121,15 +136,65 @@ function AlertDetail({ data }: { data: DetailResponse }) {
             <SeverityBadge severity={alert.severity} />
             <ProviderTag provider={alert.provider} />
           </div>
+          {confidence.level === "reduced" ? (
+            <div className="mt-3">
+              <ConfidenceBadge />
+            </div>
+          ) : null}
           <dl className="mt-4 space-y-3 text-sm">
             <Row label="Agent" value={<span className="tnum">{alert.agentId}</span>} />
+            <Row label="Area" value={agentArea(alert.agentId)} />
             <Row label="Window start" value={<span className="tnum">{formatDateTime(alert.windowStart)}</span>} />
             <Row label="Window end" value={<span className="tnum">{formatDateTime(alert.windowEnd)}</span>} />
             <Row label="Detected" value={relativeTime(alert.windowEnd)} />
           </dl>
         </Card>
 
-        <PromotePanel alert={alert} />
+        <ActionPanel alert={alert} />
+      </div>
+      </div>
+    </div>
+  );
+}
+
+/** Promote panel for roles that coordinate; a read-only note for those that don't. */
+function ActionPanel({ alert }: { alert: AlertView }) {
+  const persona = usePersona();
+  if (ROLES[persona.role].canPromote) return <PromotePanel alert={alert} />;
+  return (
+    <Card className="p-5">
+      <h3 className="text-sm font-semibold text-ink">Reviewed by the operations team</h3>
+      <p className="mt-1 text-xs text-muted">
+        {persona.role === "agent"
+          ? "This signal has been shared with your operations coordinator. They decide any next step — nothing here is automatic, and no action is taken against you."
+          : "Signals are promoted into cases by the operations and risk teams. This view is read-only for your role."}
+      </p>
+    </Card>
+  );
+}
+
+/** Prominent, review-oriented reliability caveat shown above everything else. */
+function ReducedConfidenceBanner({ reason }: { reason: string | null }) {
+  return (
+    <div
+      className="flex items-start gap-3 rounded-[var(--radius-card)] border px-5 py-4"
+      style={{ borderColor: "var(--sev-med)", background: "var(--sev-med-soft)" }}
+      role="note"
+    >
+      <span
+        aria-hidden
+        className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold"
+        style={{ background: "var(--sev-med)", color: "var(--surface)" }}
+      >
+        ◑
+      </span>
+      <div>
+        <h3 className="text-sm font-semibold" style={{ color: "var(--sev-med)" }}>
+          Reduced confidence — provider data was late or conflicting during this window
+        </h3>
+        <p className="mt-1 text-sm text-ink-2">
+          {reason ?? "Treat the figures below as indicative rather than exact and confirm against the provider before acting."}
+        </p>
       </div>
     </div>
   );
@@ -179,10 +244,11 @@ function PromotePanel({ alert }: { alert: AlertView }) {
           <div className="rounded-md border border-ok px-3 py-2.5 text-sm" style={{ background: "var(--ok-soft)", color: "var(--ok)" }}>
             ✓ Case created{caseId ? <> · <span className="tnum">{caseId.slice(0, 8)}</span></> : null}
           </div>
-          <Link href="/cases" className="block">
-            <Button variant="primary" size="md" className="w-full">
-              View on Case Board →
-            </Button>
+          <Link
+            href="/cases"
+            className="inline-flex h-10 w-full items-center justify-center rounded-md border border-brand bg-brand px-4 text-sm font-medium text-brand-ink transition-colors hover:bg-brand-hover"
+          >
+            View on Case Board →
           </Link>
         </div>
       ) : (
