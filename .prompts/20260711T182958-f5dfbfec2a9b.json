@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "commit": null,
+  "commit": "37b1967",
   "promptFile": "20260711T182958-f5dfbfec2a9b.md",
   "promptSummaryOneLiner": "added the OpenAI bilingual alert explainer, the Supabase-backed case coordination system (Open->Assigned->Acknowledged->Escalated->Resolved state machine + API routes), and the shared physical-cash-shortage detector with its test scenario",
   "timestamp": "2026-07-11T18:29:58+06:00",

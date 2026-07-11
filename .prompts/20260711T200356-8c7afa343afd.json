@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "commit": null,
+  "promptFile": "20260711T200356-8c7afa343afd.md",
+  "promptSummaryOneLiner": "Run npm run explain for real now that both keys are loaded.",
+  "timestamp": "2026-07-11T20:03:56+06:00",
+  "filesChanged": [
+    ".prompts/20260711T182958-f5dfbfec2a9b.json",
+    "package.json"
+  ],
+  "agent": "Claude Code"
+}
