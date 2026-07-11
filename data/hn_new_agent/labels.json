@@ -1,0 +1,12 @@
+{
+  "scenario": "hn_new_agent",
+  "shouldAlert": false,
+  "anomalyType": "none",
+  "targetAgentId": "AGT-NEW",
+  "windowStart": "2026-06-12T18:00:00.000Z",
+  "windowEnd": "2026-06-14T18:00:00.000Z",
+  "tripsSignals": [
+    "velocity_no_baseline"
+  ],
+  "rationale": "AGT-NEW has <2 days of history, so per-agent velocity z-scores are undefined. Detector must fall back to the population baseline with a low-confidence flag, not fire."
+}

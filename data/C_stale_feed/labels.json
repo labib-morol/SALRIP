@@ -1,0 +1,14 @@
+{
+  "scenario": "C_stale_feed",
+  "shouldAlert": true,
+  "anomalyType": "stale_feed",
+  "targetAgentId": "AGT-003",
+  "targetProvider": "bKash",
+  "windowStart": "2026-06-06T18:00:00.000Z",
+  "windowEnd": "2026-06-08T18:00:00.000Z",
+  "tripsSignals": [
+    "feed_staleness",
+    "balance_tx_reconciliation"
+  ],
+  "rationale": "bKash balance snapshots freeze (repeated value + non-advancing timestamp) for 48h while transactions keep posting, so balance contradicts the tx ledger."
+}

@@ -1,0 +1,13 @@
+{
+  "scenario": "A_quiet_drain",
+  "shouldAlert": true,
+  "anomalyType": "liquidity_drain",
+  "targetAgentId": "AGT-004",
+  "targetProvider": "bKash",
+  "windowStart": "2026-06-08T18:00:00.000Z",
+  "windowEnd": "2026-06-14T18:00:00.000Z",
+  "tripsSignals": [
+    "per_provider_balance_trend"
+  ],
+  "rationale": "bKash float trends down across the window while Nagad stays healthy, so the agent's TOTAL cash looks fine. Detector must watch per-provider trend, not just aggregate."
+}

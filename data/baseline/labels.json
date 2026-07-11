@@ -1,0 +1,7 @@
+{
+  "scenario": "baseline",
+  "shouldAlert": false,
+  "anomalyType": "none",
+  "tripsSignals": [],
+  "rationale": "Healthy multi-provider traffic; per-agent Poisson baseline for detectors to learn from."
+}

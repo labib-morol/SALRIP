@@ -1,0 +1,13 @@
+{
+  "scenario": "E_shared_cash_shortage",
+  "shouldAlert": true,
+  "anomalyType": "shared_cash_shortage",
+  "targetAgentId": "AGT-011",
+  "windowStart": "2026-06-10T08:00:00.000Z",
+  "windowEnd": "2026-06-10T09:00:00.000Z",
+  "tripsSignals": [
+    "shared_cash_multiprovider",
+    "cash_margin_low"
+  ],
+  "rationale": "~160k BDT of simultaneous cash-out demand across bKash AND Nagad within 10 min against ~120k physical cash on hand — combined multi-provider demand exceeds the shared cash pool (negative margin). Distinct from LIQUIDITY_DRAIN, which watches per-provider e-float."
+}

@@ -1,0 +1,13 @@
+{
+  "scenario": "normal_high_volume",
+  "shouldAlert": false,
+  "anomalyType": "none",
+  "targetAgentId": "AGT-001",
+  "targetProvider": "bKash",
+  "windowStart": "2026-06-09T18:00:00.000Z",
+  "windowEnd": "2026-06-12T18:00:00.000Z",
+  "tripsSignals": [
+    "velocity"
+  ],
+  "rationale": "Organic 2.4x demand spike: high velocity but high amount-CV and high counterparty diversity. Velocity alone must NOT alert — measures FPR of the velocity signal."
+}

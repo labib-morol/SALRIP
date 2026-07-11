@@ -1,0 +1,7058 @@
+[
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 399481
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 400741
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 406961
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 394501
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 371401
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 375581
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 373721
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 403121
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 400271
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 402311
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 411801
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 431421
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 389071
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 388091
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 381121
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 406601
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 387001
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 387001
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 399081
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 397131
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 407491
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 407491
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 402361
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 391741
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 430931
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 430561
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 421511
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 418251
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 406721
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 405951
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 386961
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 380381
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 428181
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 432001
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 434971
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 462791
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 390101
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 393801
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 392911
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 379001
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 395971
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 396861
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 403061
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 392561
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 421001
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 418041
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 432121
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 457021
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 381391
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 380531
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 367851
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 378551
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 402141
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 406771
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 394721
+  },
+  {
+    "agentId": "AGT-001",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 399481,
+    "currentCash": 391431
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 409661
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 406381
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 425551
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 389631
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 406181
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 407281
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 426171
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 407591
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 415961
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 406931
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 413361
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 410411
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 420361
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 424111
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 444151
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 450001
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 376411
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 369451
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 389901
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 385001
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 439651
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 439011
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 430151
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 429351
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 434481
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 436101
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 419401
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 404581
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 423531
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 425421
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 411751
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 402811
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 405581
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 409841
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 399701
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 405291
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 417261
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 411881
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 365961
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 397641
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 385311
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 385311
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 389871
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 376911
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 400961
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 396961
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 413431
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 396921
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 385361
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 382651
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 391431
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 396191
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 429361
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 429361
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 426661
+  },
+  {
+    "agentId": "AGT-002",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 409661,
+    "currentCash": 384651
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 376855
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 376855
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 399335
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 394695
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 361105
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 361105
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 338805
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 339755
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 369135
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 371235
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 380975
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 391915
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 392505
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 387825
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 374675
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 380185
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 373795
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 374835
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 352545
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 339975
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 339615
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 339615
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 298775
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 317595
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 371235
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 378215
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 364425
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 391315
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 351565
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 351565
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 364815
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 365695
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 386325
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 386305
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 367235
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 362535
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 365845
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 369385
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 393615
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 417275
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 403715
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 399825
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 382885
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 388425
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 374015
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 374015
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 345225
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 323945
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 379665
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 384785
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 352375
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 381235
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 374395
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 380025
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 383885
+  },
+  {
+    "agentId": "AGT-003",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 376855,
+    "currentCash": 358355
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 300972
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 303662
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 333282
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 362242
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 305032
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 303772
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 298222
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 284062
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 298262
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 292972
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 289682
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 273072
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 315962
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 310792
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 327132
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 326012
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 291902
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 291902
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 289122
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 297702
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 294532
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 292242
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 297752
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 301252
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 298712
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 309892
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 313522
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 291282
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 321482
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 326252
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 311232
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 279462
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 319622
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 319622
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 313852
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 321182
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 302812
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 299582
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 289742
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 293182
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 322312
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 320732
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 354842
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 344842
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 303922
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 312692
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 321882
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 341402
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 283232
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 287602
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 293772
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 304682
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 295432
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 295432
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 301732
+  },
+  {
+    "agentId": "AGT-004",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 300972,
+    "currentCash": 281632
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 300860
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 302560
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 325950
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 326990
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 303050
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 314670
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 327990
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 349710
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 286330
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 284340
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 282780
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 251230
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 280240
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 284940
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 322510
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 331930
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 313310
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 321990
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 328610
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 317840
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 274590
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 271110
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 283720
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 280370
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 304410
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 304410
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 312950
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 289730
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 311490
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 311490
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 280110
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 277270
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 287110
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 285780
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 280310
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 301400
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 291830
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 291830
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 304290
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 332230
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 312640
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 311210
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 321320
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 281720
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 306800
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 304920
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 308980
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 294500
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 295300
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 306510
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 318340
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 330010
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 297670
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 298700
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 294970
+  },
+  {
+    "agentId": "AGT-005",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 300860,
+    "currentCash": 318080
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 304051
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 304051
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 317291
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 293031
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 311311
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 311311
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 300351
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 341101
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 306291
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 306291
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 337461
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 356241
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 321291
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 325251
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 328351
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 323841
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 284201
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 284201
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 302251
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 321551
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 312911
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 310801
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 312081
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 293961
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 282331
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 285941
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 262071
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 284101
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 284281
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 272551
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 289701
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 294741
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 288991
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 282481
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 257911
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 235441
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 303911
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 301661
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 304941
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 271021
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 298411
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 302661
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 307761
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 302251
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 316031
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 326311
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 325361
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 317161
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 315811
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 313681
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 303091
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 282351
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 307411
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 308831
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 311901
+  },
+  {
+    "agentId": "AGT-006",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 304051,
+    "currentCash": 301181
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 395104
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 396614
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 381594
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 331374
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 377744
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 383614
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 380754
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 376014
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 391994
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 391994
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 403844
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 366064
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 417194
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 414084
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 405314
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 372414
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 391854
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 391884
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 402634
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 415134
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 408374
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 403034
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 416154
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 398914
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 378854
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 378854
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 387524
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 414384
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 383894
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 387094
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 379914
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 384544
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 367324
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 367324
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 353144
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 386154
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 401384
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 402144
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 397834
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 390924
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 405944
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 412094
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 394444
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 396834
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 404634
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 398674
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 410004
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 376664
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 404804
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 395284
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 435884
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 426274
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 386534
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 382754
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 359664
+  },
+  {
+    "agentId": "AGT-007",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 395104,
+    "currentCash": 341314
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 337635
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 336005
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 311975
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 332175
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 324155
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 322185
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 314675
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 294865
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 315545
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 320565
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 305195
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 316595
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 343455
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 343455
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 305335
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 319155
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 331775
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 331325
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 321165
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 312975
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 367475
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 374115
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 397595
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 407105
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 314935
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 317785
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 315525
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 315245
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 349455
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 345905
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 340695
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 319015
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 379735
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 382535
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 384815
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 328365
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 338385
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 335765
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 313075
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 277585
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 342755
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 338925
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 324695
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 300285
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 325195
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 330415
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 326335
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 341095
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 363025
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 366325
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 390205
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 386835
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 320805
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 318085
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 343225
+  },
+  {
+    "agentId": "AGT-008",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 337635,
+    "currentCash": 307465
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 429540
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 429540
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 437370
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 449610
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 418670
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 413670
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 388300
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 393050
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 427320
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 431700
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 451630
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 433620
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 429580
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 432410
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 419330
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 450760
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 433120
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 433120
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 443400
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 440630
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 406380
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 407580
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 388430
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 378090
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 397570
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 397570
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 393490
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 406930
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 430400
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 427570
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 422950
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 402990
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 414180
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 414960
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 445110
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 442280
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 441440
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 446190
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 456430
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 438290
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 425260
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 417870
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 411100
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 426920
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 421090
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 415400
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 408010
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 419280
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 417160
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 418810
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 389010
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 383040
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 435470
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 430560
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 465150
+  },
+  {
+    "agentId": "AGT-009",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 429540,
+    "currentCash": 488700
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 314110
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 314110
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 307110
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 299890
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 328910
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 332500
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 337620
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 361160
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 301570
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 301570
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 266570
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 248630
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 318010
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 318010
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 313990
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 313310
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 312150
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 307420
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 291330
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 268260
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 295650
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 296760
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 306460
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 306820
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 314340
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 315990
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 390970
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 386600
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 313260
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 319520
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 298010
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 295900
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 303710
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 300340
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 277510
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 271180
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 303570
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 305890
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 284240
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 265300
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 283930
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 283930
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 285930
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 285470
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 318110
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 295160
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 272830
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 246230
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 309630
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 309630
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 309080
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 305750
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 312160
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 311690
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 318750
+  },
+  {
+    "agentId": "AGT-010",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 314110,
+    "currentCash": 280250
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 461260
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 459220
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 433810
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 475300
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 462590
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 459530
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 445150
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 422920
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 465320
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 464310
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 480550
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 455960
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 448730
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 446380
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 441100
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 445680
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 441930
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 440990
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 445550
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 439720
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 467470
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 469080
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 500750
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 506110
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 452030
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 455760
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 456590
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 437860
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 470520
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 479430
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 472940
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 444810
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 451140
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 448350
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 449330
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 448250
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 462720
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 464620
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 488430
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 464590
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 472770
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 472770
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 472800
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 473690
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 475000
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 480170
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 501100
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 491630
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 442730
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 442060
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 431220
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 442930
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 471310
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 485540
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 485680
+  },
+  {
+    "agentId": "AGT-011",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 461260,
+    "currentCash": 469570
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 399580
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 399580
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 445520
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 466730
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 380270
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 383310
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 381840
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 425630
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 396020
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 390270
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 401300
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 398530
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 380150
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 376700
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 400870
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 397350
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 429690
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 425250
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 414240
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 426900
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 404400
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 397070
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 393250
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 347850
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 397040
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 397040
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 366580
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 360670
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 400340
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 401900
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 408940
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 381660
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 415190
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 415190
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 394190
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 365340
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 388760
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 390630
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 396780
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 382910
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 413550
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 408620
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 396710
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 378180
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 412800
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 408720
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 438600
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 472250
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 389380
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 386670
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 390850
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 392680
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 363100
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 364560
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 354830
+  },
+  {
+    "agentId": "AGT-012",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 399580,
+    "currentCash": 366000
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 428418
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 436178
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 419118
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 402108
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 436768
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 435478
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 451268
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 425738
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 438158
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 442688
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 447738
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 464638
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 428338
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 433828
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 427698
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 396828
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 417828
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 414988
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 419328
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 429648
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 410228
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 411298
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 419878
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 387828
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 405618
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 392508
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 385428
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 409738
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 412238
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 411238
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 425978
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 461238
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 418178
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 420438
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 403848
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 383548
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 402548
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 405768
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 401928
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 369868
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 409448
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 412228
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 415458
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 436748
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 429628
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 426898
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 415428
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 401498
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 443798
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 443798
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 451128
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 438118
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 436598
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 439178
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 439378
+  },
+  {
+    "agentId": "AGT-013",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 428418,
+    "currentCash": 425208
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 477122
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 478402
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 494502
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 473472
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 447382
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 443572
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 477372
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 465172
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 445882
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 435572
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 426432
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 403542
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 475682
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 475272
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 498252
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 464962
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 471702
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 461322
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 426002
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 424362
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 519832
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 518922
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 524352
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 518812
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 465152
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 452482
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 449582
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 445262
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 461132
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 462222
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 498092
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 506542
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 478302
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 486592
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 479292
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 481652
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 492032
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 482912
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 448022
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 464902
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 449832
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 449512
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 391682
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 392992
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 486432
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 484732
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 461192
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 465302
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 464592
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 461572
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 453022
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 430692
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 460482
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 460482
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 423192
+  },
+  {
+    "agentId": "AGT-014",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 477122,
+    "currentCash": 410322
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 318842
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 308512
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 304332
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 313932
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 306012
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 310012
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 297792
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 286832
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 317002
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 317402
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 324782
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 326942
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 305962
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 299952
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 332712
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 300292
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 311562
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 311002
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 273192
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 239942
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 326702
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 316852
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 320432
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 321512
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 332532
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 330432
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 300852
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 297762
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 308532
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 309332
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 291852
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 322932
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 309902
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 309352
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 307882
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 304012
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 331292
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 338062
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 329692
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 311752
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 327492
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 321452
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 335882
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 324072
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 330412
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 328922
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 309912
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 297092
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 279002
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 278232
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 261392
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 259772
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 328652
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 324172
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 347332
+  },
+  {
+    "agentId": "AGT-015",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 318842,
+    "currentCash": 318522
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 354241
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 351561
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 348231
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 354901
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 344511
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 344311
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 328891
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 322651
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 354381
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 365971
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 366361
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 361791
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 326221
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 334271
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 315051
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 309721
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 374241
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 374561
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 373531
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 358811
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 359001
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 346391
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 336261
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 352871
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 342401
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 336851
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 341621
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 356901
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 347641
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 350071
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 340611
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 308071
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 331121
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 338181
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 308261
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 298931
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 329981
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 321851
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 278421
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 269051
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 344111
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 348651
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 323241
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 333451
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 354311
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 359371
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 380731
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 370021
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 375301
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 370131
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 368471
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 317591
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 331321
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 338961
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 322121
+  },
+  {
+    "agentId": "AGT-016",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 354241,
+    "currentCash": 314731
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 330079
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 328519
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 325459
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 300929
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 330049
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 329929
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 330019
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 334039
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 340619
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 339479
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 332689
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 324859
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 333559
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 340389
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 333739
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 313019
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 328299
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 327879
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 325369
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 337369
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 316759
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 314789
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 301819
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 300769
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 338509
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 330149
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 341429
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 343769
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 317449
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 316929
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 326069
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 315249
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 357639
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 348329
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 331329
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 322369
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 346439
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 340929
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 335699
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 297979
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 331509
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 326569
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 347789
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 372279
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 312149
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 312149
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 341059
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 334879
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 337889
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 342739
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 316569
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 286159
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 292999
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 295579
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 304439
+  },
+  {
+    "agentId": "AGT-017",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 330079,
+    "currentCash": 326579
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 257020
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 255300
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 260010
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 261840
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 246310
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 249290
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 238220
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 234880
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 254880
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 251130
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 243310
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 252370
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 276420
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 276420
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 292070
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 286250
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 259450
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 264410
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 251740
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 218340
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 252960
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 259120
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 224000
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 206920
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 252120
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 253680
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 284100
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 269110
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 260170
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 261650
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 254070
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 249610
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 257110
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 257110
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 257640
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 235450
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 267990
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 271900
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 265960
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 228270
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 245270
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 244140
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 224900
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 213580
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 249110
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 254130
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 246280
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 248480
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 238370
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 233170
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 237570
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 257720
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 262680
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 287470
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 283370
+  },
+  {
+    "agentId": "AGT-018",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 257020,
+    "currentCash": 267400
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 390260
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 385110
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 436540
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 458360
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 394340
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 396400
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 405410
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 397490
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 399230
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 398850
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 423340
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 448040
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 393270
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 396980
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 411720
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 404720
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 397200
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 389790
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 350170
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 324340
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 433970
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 434160
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 397340
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 383700
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 396090
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 389790
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 365340
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 319590
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 410500
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 408970
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 392530
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 446040
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 371460
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 373690
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 388100
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 389640
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 390560
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 395030
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 377910
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 386760
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 383980
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 381410
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 376210
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 330820
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 410610
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 404260
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 392450
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 386300
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 405870
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 401410
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 408420
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 408350
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 378510
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 376550
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 399230
+  },
+  {
+    "agentId": "AGT-019",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 390260,
+    "currentCash": 374850
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 339878
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 344828
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 302588
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 287258
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 354688
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 346348
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 329188
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 311788
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 352228
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 347308
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 330408
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 344568
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 339898
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 342098
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 345788
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 346538
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 331168
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 329998
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 347888
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 346528
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 349538
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 345218
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 343498
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 331378
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 322478
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 325008
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 341558
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 309518
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 354958
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 354958
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 333888
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 333118
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 334858
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 331848
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 334548
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 292688
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 353058
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 353728
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 344928
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 357538
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 329868
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 334408
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 339468
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 339768
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 328008
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 328008
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 306188
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 303228
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 340788
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 339298
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 351088
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 331928
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 301718
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 299738
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 277618
+  },
+  {
+    "agentId": "AGT-020",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 339878,
+    "currentCash": 288248
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-05-31T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-01T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-01T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-01T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-01T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-02T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-02T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-02T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-02T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-03T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-03T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-03T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-03T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-04T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-04T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-04T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-04T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-05T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-05T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-05T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-05T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-06T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-06T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-06T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-06T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-07T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-07T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-07T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-07T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-08T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-08T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-08T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-08T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-09T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-09T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-09T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-09T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-10T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-10T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-10T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-10T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-11T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-11T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-11T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-11T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-12T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-12T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-12T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 418150
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-13T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 425880
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-13T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 434460
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-13T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 441210
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-13T18:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 400540
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-14T00:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 406910
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-14T06:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 396570
+  },
+  {
+    "agentId": "AGT-NEW",
+    "timestamp": "2026-06-14T12:00:00.000Z",
+    "openingCash": 418150,
+    "currentCash": 388660
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "scenario": "hn_salary_day",
+  "shouldAlert": false,
+  "anomalyType": "none",
+  "targetAgentId": "AGT-006",
+  "targetProvider": "bKash",
+  "windowStart": "2026-06-08T04:00:00.000Z",
+  "windowEnd": "2026-06-08T07:00:00.000Z",
+  "tripsSignals": [
+    "velocity",
+    "amount_cv_low"
+  ],
+  "rationale": "Payday cash-outs: ~40 near-identical 15k amounts (trips clustering) but from ~40 different customers (does NOT trip concentration). Under the all-three rule it correctly clears — shows why clustering alone must never alert."
+}

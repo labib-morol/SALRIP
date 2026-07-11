@@ -1,0 +1,15 @@
+{
+  "scenario": "B_fraud_burst",
+  "shouldAlert": true,
+  "anomalyType": "fraud_burst",
+  "targetAgentId": "AGT-007",
+  "targetProvider": "Nagad",
+  "windowStart": "2026-06-11T09:00:00.000Z",
+  "windowEnd": "2026-06-11T11:00:00.000Z",
+  "tripsSignals": [
+    "velocity",
+    "amount_cv_low",
+    "counterparty_concentration"
+  ],
+  "rationale": "34 near-identical ~24k BDT e-money disbursements to 3 accounts inside 90 min, draining Nagad float to exhaustion. Trips velocity AND (low amount-CV AND concentration)."
+}

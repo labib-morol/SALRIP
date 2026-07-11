@@ -1,0 +1,15 @@
+{
+  "scenario": "D_alert_case",
+  "shouldAlert": true,
+  "anomalyType": "fraud_burst",
+  "targetAgentId": "AGT-007",
+  "targetProvider": "Nagad",
+  "windowStart": "2026-06-11T09:00:00.000Z",
+  "windowEnd": "2026-06-11T11:00:00.000Z",
+  "tripsSignals": [
+    "velocity",
+    "amount_cv_low",
+    "counterparty_concentration"
+  ],
+  "rationale": "Same fraud burst as (B), promoted to an Alert and routed to an analyst as a Case with a 4h SLA — demonstrates the alert -> case-assignment flow."
+}

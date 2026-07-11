@@ -1,0 +1,108 @@
+[
+  {
+    "scenario": "baseline",
+    "shouldAlert": false,
+    "anomalyType": "none",
+    "transactions": 20186,
+    "balances": 2240,
+    "tripsSignals": []
+  },
+  {
+    "scenario": "A_quiet_drain",
+    "shouldAlert": true,
+    "anomalyType": "liquidity_drain",
+    "transactions": 19362,
+    "balances": 2240,
+    "tripsSignals": [
+      "per_provider_balance_trend"
+    ]
+  },
+  {
+    "scenario": "B_fraud_burst",
+    "shouldAlert": true,
+    "anomalyType": "fraud_burst",
+    "transactions": 19819,
+    "balances": 2240,
+    "tripsSignals": [
+      "velocity",
+      "amount_cv_low",
+      "counterparty_concentration"
+    ]
+  },
+  {
+    "scenario": "C_stale_feed",
+    "shouldAlert": true,
+    "anomalyType": "stale_feed",
+    "transactions": 20264,
+    "balances": 2240,
+    "tripsSignals": [
+      "feed_staleness",
+      "balance_tx_reconciliation"
+    ]
+  },
+  {
+    "scenario": "D_alert_case",
+    "shouldAlert": true,
+    "anomalyType": "fraud_burst",
+    "transactions": 19819,
+    "balances": 2240,
+    "tripsSignals": [
+      "velocity",
+      "amount_cv_low",
+      "counterparty_concentration"
+    ]
+  },
+  {
+    "scenario": "normal_high_volume",
+    "shouldAlert": false,
+    "anomalyType": "none",
+    "transactions": 24861,
+    "balances": 2240,
+    "tripsSignals": [
+      "velocity"
+    ]
+  },
+  {
+    "scenario": "hn_salary_day",
+    "shouldAlert": false,
+    "anomalyType": "none",
+    "transactions": 19770,
+    "balances": 2240,
+    "tripsSignals": [
+      "velocity",
+      "amount_cv_low"
+    ]
+  },
+  {
+    "scenario": "hn_corporate_disbursement",
+    "shouldAlert": false,
+    "anomalyType": "none",
+    "transactions": 19784,
+    "balances": 2240,
+    "tripsSignals": [
+      "velocity",
+      "counterparty_concentration"
+    ]
+  },
+  {
+    "scenario": "hn_new_agent",
+    "shouldAlert": false,
+    "anomalyType": "none",
+    "transactions": 20818,
+    "balances": 2352,
+    "tripsSignals": [
+      "velocity_no_baseline"
+    ]
+  },
+  {
+    "scenario": "E_shared_cash_shortage",
+    "shouldAlert": true,
+    "anomalyType": "shared_cash_shortage",
+    "transactions": 18260,
+    "balances": 2240,
+    "tripsSignals": [
+      "shared_cash_multiprovider",
+      "cash_margin_low"
+    ]
+  }
+]

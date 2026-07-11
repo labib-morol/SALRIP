@@ -1,0 +1,22 @@
+[
+  {
+    "alertId": "ALT-000001",
+    "type": "FRAUD_BURST",
+    "agentId": "AGT-007",
+    "provider": "Nagad",
+    "severity": "HIGH",
+    "detectedAt": "2026-06-11T11:00:00.000Z",
+    "windowStart": "2026-06-11T09:00:00.000Z",
+    "windowEnd": "2026-06-11T11:00:00.000Z",
+    "evidence": {
+      "txCount": 34,
+      "uniqueCustomers": 3,
+      "amountCv": 0.03,
+      "signals": [
+        "velocity",
+        "amount_cv_low",
+        "counterparty_concentration"
+      ]
+    }
+  }
+]

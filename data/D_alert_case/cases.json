@@ -1,0 +1,10 @@
+[
+  {
+    "caseId": "CASE-000001",
+    "alertId": "ALT-000001",
+    "assignedTo": "analyst.begum",
+    "status": "ASSIGNED",
+    "createdAt": "2026-06-11T11:00:00.000Z",
+    "slaDueAt": "2026-06-11T15:00:00.000Z"
+  }
+]

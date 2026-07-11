@@ -1,0 +1,14 @@
+{
+  "scenario": "hn_corporate_disbursement",
+  "shouldAlert": false,
+  "anomalyType": "none",
+  "targetAgentId": "AGT-009",
+  "targetProvider": "Nagad",
+  "windowStart": "2026-06-06T05:00:00.000Z",
+  "windowEnd": "2026-06-06T07:00:00.000Z",
+  "tripsSignals": [
+    "velocity",
+    "counterparty_concentration"
+  ],
+  "rationale": "Legit corporate payer settling through one agent: trips velocity AND concentration but NOT clustering (amounts vary). Under the all-three rule it correctly clears — shows why concentration alone must never alert."
+}

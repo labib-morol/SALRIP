@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "commit": null,
+  "commit": "3eb263e",
   "promptFile": "20260712T053343-852fc79821e7.md",
   "promptSummaryOneLiner": "Final visual polish and presentation-readiness pass across all role-based Vault screens, including responsive off-canvas navigation, prominent persona context, accessible controls and dialogs, intentional empty states, clean demo case data, and full persona/build verification.",
   "timestamp": "2026-07-12T05:33:43+06:00",
