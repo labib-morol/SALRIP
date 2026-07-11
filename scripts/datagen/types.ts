@@ -24,6 +24,18 @@ export interface Balance {
   currentBalance: number; // e-float at snapshot time
 }
 
+/**
+ * Shared PHYSICAL cash snapshot for an agent. Unlike Balance (per provider),
+ * this is ONE pool per agent: every provider's CASH_OUT draws it down, every
+ * CASH_IN tops it up. This is what a shared-cash-shortage detector watches.
+ */
+export interface Cash {
+  agentId: string;
+  timestamp: string; // ISO 8601
+  openingCash: number; // physical cash at start of that day
+  currentCash: number; // physical cash at snapshot time
+}
+
 export interface Alert {
   alertId: string;
   type: "LIQUIDITY_DRAIN" | "FRAUD_BURST" | "STALE_FEED";
@@ -53,7 +65,7 @@ export interface Case {
 export interface Label {
   scenario: string;
   shouldAlert: boolean;
-  anomalyType: "none" | "liquidity_drain" | "fraud_burst" | "stale_feed";
+  anomalyType: "none" | "liquidity_drain" | "fraud_burst" | "stale_feed" | "shared_cash_shortage";
   targetAgentId?: string;
   targetProvider?: Provider;
   windowStart?: string;
@@ -67,6 +79,7 @@ export interface DatasetBundle {
   scenario: string;
   transactions: Transaction[];
   balances: Balance[];
+  cash: Cash[];
   alerts?: Alert[];
   cases?: Case[];
   label: Label;

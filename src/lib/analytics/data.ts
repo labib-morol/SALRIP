@@ -1,6 +1,6 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import type { Balance, Dataset, Label, Transaction } from "./types.ts";
+import type { Balance, Cash, Dataset, Label, Transaction } from "./types.ts";
 
 /** Asia/Dhaka is UTC+6, no DST — local hour-of-day from an ISO-UTC timestamp. */
 export function hourOfDay(iso: string): number {
@@ -15,10 +15,12 @@ function readJson<T>(path: string): T {
 
 export function loadDataset(scenario: string, root = DATA_ROOT): Dataset {
   const dir = join(root, scenario);
+  const cashPath = join(dir, "cash.json");
   return {
     scenario,
     transactions: readJson<Transaction[]>(join(dir, "transactions.json")),
     balances: readJson<Balance[]>(join(dir, "balances.json")),
+    cash: existsSync(cashPath) ? readJson<Cash[]>(cashPath) : [],
     label: readJson<Label>(join(dir, "labels.json")),
   };
 }

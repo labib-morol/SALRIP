@@ -75,13 +75,25 @@ function main(): void {
 
   const manifest: Array<Record<string, unknown>> = [];
   const stats: WindowStat[] = [];
+  let eStat: { providers: number; demand: number } | null = null;
 
   for (const build of BUILDERS) {
     const b = build();
+    if (b.scenario === "E_shared_cash_shortage") {
+      const target = b.label.targetAgentId;
+      const burst = b.transactions.filter(
+        (t) => t.txId.startsWith("BURST-") && t.agentId === target && t.type === "CASH_OUT",
+      );
+      eStat = {
+        providers: new Set(burst.map((t) => t.provider)).size,
+        demand: burst.reduce((a, t) => a + t.amount, 0),
+      };
+    }
     const dir = join(OUT, b.scenario);
     mkdirSync(dir, { recursive: true });
     writeJson(dir, "transactions.json", b.transactions);
     writeJson(dir, "balances.json", b.balances);
+    writeJson(dir, "cash.json", b.cash);
     writeJson(dir, "labels.json", b.label);
     if (b.alerts) writeJson(dir, "alerts.json", b.alerts);
     if (b.cases) writeJson(dir, "cases.json", b.cases);
@@ -125,6 +137,8 @@ function main(): void {
     ["hn_corporate cluster CV > 0.30 (NOT clustered)", byName["hn_corporate_disbursement"].clusterCv > 0.3],
     ["hn_corporate cluster <= 3 customers (concentrated)", byName["hn_corporate_disbursement"].clusterUnique <= 3],
     ["normal_high_volume window CV > 0.30 (diverse amounts)", byName["normal_high_volume"].windowCv > 0.3],
+    ["E cash-out demand spans 2 providers (shared)", (eStat?.providers ?? 0) === 2],
+    ["E combined cash-out demand >= 55k (exceeds thin cash)", (eStat?.demand ?? 0) >= 55_000],
   ];
   console.log("\nSanity assertions:\n");
   let ok = true;

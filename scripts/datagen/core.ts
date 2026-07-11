@@ -1,5 +1,5 @@
 import { Rng } from "./rng.ts";
-import type { Balance, Provider, Transaction, TxStatus, TxType } from "./types.ts";
+import type { Balance, Cash, Provider, Transaction, TxStatus, TxType } from "./types.ts";
 import {
   AMOUNT_MEDIAN,
   AMOUNT_SIGMA,
@@ -9,6 +9,8 @@ import {
   DAILY_VOLUME_MIN,
   HOUR_WEIGHTS,
   SIM_DAYS,
+  OPENING_CASH_MAX,
+  OPENING_CASH_MIN,
   OPENING_FLOAT_MAX,
   OPENING_FLOAT_MIN,
   PROVIDERS,
@@ -23,6 +25,8 @@ export interface Agent {
   /** normal daily volume per provider */
   dailyVolume: Record<Provider, number>;
   opening: Record<Provider, number>;
+  /** opening PHYSICAL cash — one shared pool across providers */
+  openingCash: number;
   customerPool: string[];
 }
 
@@ -43,7 +47,8 @@ export function buildAgents(rng: Rng, count: number): Agent[] {
       { length: CUSTOMER_POOL },
       (_, k) => `${agentId}-C${String(k + 1).padStart(4, "0")}`,
     );
-    agents.push({ agentId, area: rng.pick(AREAS), dailyVolume, opening, customerPool });
+    const openingCash = Math.round(rng.uniform(OPENING_CASH_MIN, OPENING_CASH_MAX));
+    agents.push({ agentId, area: rng.pick(AREAS), dailyVolume, opening, openingCash, customerPool });
   }
   return agents;
 }
@@ -129,6 +134,13 @@ export function floatDelta(t: Transaction): number {
   return t.type === "CASH_OUT" ? t.amount : -t.amount;
 }
 
+/** Signed effect on the agent's shared PHYSICAL cash — the mirror of e-float:
+ *  a cash-out hands physical cash to the customer (down); a cash-in takes it (up). */
+export function cashDelta(t: Transaction): number {
+  if (t.status !== "SUCCESS") return 0;
+  return t.type === "CASH_OUT" ? -t.amount : t.amount;
+}
+
 /**
  * Walk transactions chronologically to produce 6-hourly balance snapshots.
  * `manage` models a real agent actively rebalancing float back to its baseline
@@ -173,6 +185,50 @@ export function computeBalances(
       timestamp: new Date(snapTime).toISOString(),
       openingBalance: Math.round(dayOpening),
       currentBalance: Math.round(float),
+    });
+  }
+  return snapshots;
+}
+
+/**
+ * 6-hourly snapshots of the agent's SHARED physical cash pool, walked over ALL
+ * of the agent's transactions (both providers). Same daily-restock model as
+ * computeBalances; floored at 0 (can't hand out cash you don't hold).
+ */
+export function computeCash(
+  agentId: string,
+  openingCash: number,
+  txs: Transaction[],
+  opts: { manage: boolean } = { manage: true },
+): Cash[] {
+  const sorted = [...txs].sort((a, b) => a.timestamp.localeCompare(b.timestamp));
+  const snapshots: Cash[] = [];
+  let cash = openingCash;
+  let cursor = 0;
+
+  const startDay = new Date(SIM_START);
+  const totalSnaps = SIM_DAYS * 4;
+  let dayOpening = openingCash;
+  let lastDayIdx = -1;
+
+  for (let s = 0; s < totalSnaps; s++) {
+    const snapTime = startDay.getTime() + s * 6 * 3600_000;
+    const dayIdx = Math.floor((snapTime - startDay.getTime()) / DAY_MS);
+    if (dayIdx !== lastDayIdx) {
+      if (opts.manage) cash = openingCash; // daily restock
+      lastDayIdx = dayIdx;
+      dayOpening = cash;
+    }
+    while (cursor < sorted.length && new Date(sorted[cursor].timestamp).getTime() <= snapTime) {
+      cash += cashDelta(sorted[cursor]);
+      if (cash < 0) cash = 0;
+      cursor++;
+    }
+    snapshots.push({
+      agentId,
+      timestamp: new Date(snapTime).toISOString(),
+      openingCash: Math.round(dayOpening),
+      currentCash: Math.round(cash),
     });
   }
   return snapshots;

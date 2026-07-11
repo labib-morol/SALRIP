@@ -24,10 +24,18 @@ export interface Balance {
   currentBalance: number;
 }
 
+/** Shared physical-cash snapshot (one pool per agent, all providers draw it). */
+export interface Cash {
+  agentId: string;
+  timestamp: string;
+  openingCash: number;
+  currentCash: number;
+}
+
 export interface Label {
   scenario: string;
   shouldAlert: boolean;
-  anomalyType: "none" | "liquidity_drain" | "fraud_burst" | "stale_feed";
+  anomalyType: "none" | "liquidity_drain" | "fraud_burst" | "stale_feed" | "shared_cash_shortage";
   targetAgentId?: string;
   targetProvider?: Provider;
   windowStart?: string;
@@ -40,10 +48,11 @@ export interface Dataset {
   scenario: string;
   transactions: Transaction[];
   balances: Balance[];
+  cash: Cash[];
   label: Label;
 }
 
-export type AlertType = "FRAUD_BURST" | "LIQUIDITY_DRAIN" | "STALE_FEED";
+export type AlertType = "FRAUD_BURST" | "LIQUIDITY_DRAIN" | "STALE_FEED" | "SHARED_CASH_SHORTAGE";
 
 export interface DetectionAlert {
   type: AlertType;

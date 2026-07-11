@@ -8,10 +8,13 @@
     "start": "next start",
     "lint": "eslint",
     "generate": "node --experimental-strip-types scripts/datagen/index.ts",
-    "analyze": "node --experimental-strip-types scripts/analyze.ts"
+    "analyze": "node --experimental-strip-types scripts/analyze.ts",
+    "explain": "node --experimental-strip-types scripts/explain-demo.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.110.2",
     "next": "16.2.10",
+    "openai": "^6.46.0",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },

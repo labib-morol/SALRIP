@@ -5,7 +5,7 @@ import {
   isConcentrated,
   velocitySignal,
 } from "./signals.ts";
-import type { Balance, Dataset, DetectionAlert, Provider } from "./types.ts";
+import type { Balance, Dataset, DetectionAlert, Provider, Transaction } from "./types.ts";
 
 const PROVIDERS: Provider[] = ["bKash", "Nagad"];
 const HOUR_MS = 3600_000;
@@ -177,6 +177,94 @@ export function detectStaleFeed(ds: Dataset): DetectionAlert[] {
   return alerts;
 }
 
+// ---------------------------------------------------------------------------
+// Shared physical-cash shortage — combined near-simultaneous CASH_OUT demand
+// across MULTIPLE providers approaching/exceeding the agent's single shared
+// physical cash pool. Distinct from LIQUIDITY_DRAIN (per-provider e-float).
+// ---------------------------------------------------------------------------
+export const CASH_WINDOW_MIN = 15;
+export const CASH_MARGIN_ALERT = 0.8; // demand >= 80% of cash on hand -> approaching
+export const CASH_MARGIN_HIGH = 1.0; // demand >= cash on hand -> zero/negative margin
+
+export function detectSharedCashShortage(ds: Dataset): DetectionAlert[] {
+  const alerts: DetectionAlert[] = [];
+
+  // sorted (time, cash) snapshots per agent
+  const cashByAgent = new Map<string, Array<{ t: number; cash: number }>>();
+  for (const c of ds.cash) {
+    const arr = cashByAgent.get(c.agentId) ?? cashByAgent.set(c.agentId, []).get(c.agentId)!;
+    arr.push({ t: new Date(c.timestamp).getTime(), cash: c.currentCash });
+  }
+  for (const arr of cashByAgent.values()) arr.sort((a, b) => a.t - b.t);
+
+  // physical cash on hand just before a moment
+  const cashAt = (agentId: string, ms: number): number | null => {
+    const arr = cashByAgent.get(agentId);
+    if (!arr || arr.length === 0) return null;
+    let v = arr[0].cash;
+    for (const s of arr) {
+      if (s.t <= ms) v = s.cash;
+      else break;
+    }
+    return v;
+  };
+
+  // successful cash-out tx per agent (across all providers)
+  const outByAgent = new Map<string, Transaction[]>();
+  for (const t of ds.transactions) {
+    if (t.status !== "SUCCESS" || t.type !== "CASH_OUT") continue;
+    (outByAgent.get(t.agentId) ?? outByAgent.set(t.agentId, []).get(t.agentId)!).push(t);
+  }
+
+  const win = CASH_WINDOW_MIN * 60_000;
+  for (const [agentId, rows] of outByAgent) {
+    rows.sort((a, b) => a.timestamp.localeCompare(b.timestamp));
+    const times = rows.map((r) => new Date(r.timestamp).getTime());
+    let best: { ratio: number; demand: number; avail: number; providers: Set<Provider>; start: number } | null = null;
+
+    let j = 0;
+    for (let i = 0; i < times.length; i++) {
+      if (j < i) j = i;
+      while (j + 1 < times.length && times[j + 1] - times[i] < win) j++;
+      const providers = new Set<Provider>();
+      let demand = 0;
+      for (let k = i; k <= j; k++) {
+        providers.add(rows[k].provider);
+        demand += rows[k].amount;
+      }
+      if (providers.size < 2) continue; // "shared" = simultaneous multi-provider demand
+      const avail = cashAt(agentId, times[i]);
+      if (avail == null) continue;
+      const ratio = avail <= 0 ? Infinity : demand / avail;
+      if (!best || ratio > best.ratio) best = { ratio, demand, avail, providers, start: times[i] };
+    }
+
+    if (best && best.ratio >= CASH_MARGIN_ALERT) {
+      alerts.push({
+        type: "SHARED_CASH_SHORTAGE",
+        agentId,
+        provider: [...best.providers][0], // cross-provider; evidence lists all
+        severity: best.ratio >= CASH_MARGIN_HIGH ? "HIGH" : "MEDIUM",
+        windowStart: new Date(best.start).toISOString(),
+        windowEnd: new Date(best.start + win).toISOString(),
+        evidence: {
+          combinedCashOutDemand: best.demand,
+          availablePhysicalCash: best.avail,
+          marginBdt: Math.round(best.avail - best.demand),
+          demandVsCashPct: Number((best.ratio === Infinity ? 999 : best.ratio * 100).toFixed(0)),
+          providers: [...best.providers].join("+"),
+        },
+      });
+    }
+  }
+  return alerts;
+}
+
 export function analyze(ds: Dataset): DetectionAlert[] {
-  return [...detectFraud(ds), ...detectLiquidityDrain(ds), ...detectStaleFeed(ds)];
+  return [
+    ...detectFraud(ds),
+    ...detectLiquidityDrain(ds),
+    ...detectStaleFeed(ds),
+    ...detectSharedCashShortage(ds),
+  ];
 }

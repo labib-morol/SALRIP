@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "commit": null,
+  "commit": "a7d22d2",
   "promptFile": "20260711T151302-d77180518397.md",
   "promptSummaryOneLiner": "built the src/lib/analytics detection engine (Poisson velocity, cluster-isolated all-three fraud rule, daily-opening liquidity-drain, stale-feed) with an eval harness hitting 100% recall / 0% FPR, plus the generator and docs refinements it required",
   "timestamp": "2026-07-11T15:13:02+06:00",

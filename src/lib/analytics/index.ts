@@ -9,6 +9,12 @@ export {
   isConcentrated,
   poissonSurvival,
 } from "./signals.ts";
-export { analyze, detectFraud, detectLiquidityDrain, detectStaleFeed } from "./detectors.ts";
+export {
+  analyze,
+  detectFraud,
+  detectLiquidityDrain,
+  detectStaleFeed,
+  detectSharedCashShortage,
+} from "./detectors.ts";
 export { evaluateDataset, summarize } from "./evaluate.ts";
 export type { ScenarioResult, Summary } from "./evaluate.ts";

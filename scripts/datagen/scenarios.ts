@@ -1,10 +1,11 @@
 import { deriveSeed, Rng } from "./rng.ts";
-import { buildAgents, computeBalances, genTransactions } from "./core.ts";
+import { buildAgents, computeBalances, computeCash, genTransactions } from "./core.ts";
 import type { Agent } from "./core.ts";
 import type {
   Alert,
   Balance,
   Case,
+  Cash,
   DatasetBundle,
   Provider,
   Transaction,
@@ -85,6 +86,22 @@ function assembleBalances(
   return out;
 }
 
+/** Shared physical-cash series per agent (all providers). `openingOverride`
+ *  lets a scenario give one agent a thin cash pool. */
+function assembleCash(
+  agents: Agent[],
+  txs: Transaction[],
+  opts: { openingOverride?: Record<string, number> } = {},
+): Cash[] {
+  const out: Cash[] = [];
+  for (const a of agents) {
+    const sub = txs.filter((t) => t.agentId === a.agentId);
+    const opening = opts.openingOverride?.[a.agentId] ?? a.openingCash;
+    out.push(...computeCash(a.agentId, opening, sub, { manage: true }));
+  }
+  return out;
+}
+
 function genAllBaseline(rng: Rng, agents: Agent[]): Transaction[] {
   const txs: Transaction[] = [];
   for (const a of agents) {
@@ -107,10 +124,12 @@ export function buildBaseline(): DatasetBundle {
   const agents = buildAgents(rng, AGENT_COUNT);
   const transactions = genAllBaseline(rng, agents);
   const balances = assembleBalances(agents, transactions);
+  const cash = assembleCash(agents, transactions);
   return {
     scenario: "baseline",
     transactions,
     balances,
+    cash,
     label: {
       scenario: "baseline",
       shouldAlert: false,
@@ -151,10 +170,12 @@ export function buildQuietDrain(): DatasetBundle {
   }
   // leave the draining leg unmanaged (no daily rebalance) so the drain accumulates
   const balances = assembleBalances(agents, txs, new Set([`${target.agentId}:${drainProvider}`]));
+  const cash = assembleCash(agents, txs);
   return {
     scenario: "A_quiet_drain",
     transactions: txs,
     balances,
+    cash,
     label: {
       scenario: "A_quiet_drain",
       shouldAlert: true,
@@ -194,10 +215,12 @@ export function buildFraudBurst(): DatasetBundle {
   txs.push(...burst);
 
   const balances = assembleBalances(agents, txs);
+  const cash = assembleCash(agents, txs);
   return {
     scenario: "B_fraud_burst",
     transactions: txs,
     balances,
+    cash,
     label: {
       scenario: "B_fraud_burst",
       shouldAlert: true,
@@ -244,6 +267,7 @@ export function buildStaleFeed(): DatasetBundle {
     scenario: "C_stale_feed",
     transactions: txs,
     balances,
+    cash: assembleCash(agents, txs),
     label: {
       scenario: "C_stale_feed",
       shouldAlert: true,
@@ -296,6 +320,7 @@ export function buildAlertCase(): DatasetBundle {
     scenario: "D_alert_case",
     transactions: base.transactions,
     balances: base.balances,
+    cash: base.cash,
     alerts: [alert],
     cases: [kase],
     label: {
@@ -336,6 +361,7 @@ export function buildHighVolume(): DatasetBundle {
     scenario: "normal_high_volume",
     transactions: txs,
     balances,
+    cash: assembleCash(agents, txs),
     label: {
       scenario: "normal_high_volume",
       shouldAlert: false,
@@ -378,6 +404,9 @@ export function buildHnSalaryDay(): DatasetBundle {
     scenario: "hn_salary_day",
     transactions: txs,
     balances,
+    // a competent agent restocks physical cash for a known payday rush, so the
+    // 600k of withdrawals never exhausts the pool -> no shared-cash shortage
+    cash: assembleCash(agents, txs, { openingOverride: { [target.agentId]: 900_000 } }),
     label: {
       scenario: "hn_salary_day",
       shouldAlert: false,
@@ -420,6 +449,7 @@ export function buildHnCorporate(): DatasetBundle {
     scenario: "hn_corporate_disbursement",
     transactions: txs,
     balances,
+    cash: assembleCash(agents, txs),
     label: {
       scenario: "hn_corporate_disbursement",
       shouldAlert: false,
@@ -457,10 +487,12 @@ export function buildHnNewAgent(): DatasetBundle {
     );
   }
   const balances = assembleBalances(all, txs);
+  const cash = assembleCash(all, txs);
   return {
     scenario: "hn_new_agent",
     transactions: txs,
     balances,
+    cash,
     label: {
       scenario: "hn_new_agent",
       shouldAlert: false,
@@ -475,6 +507,58 @@ export function buildHnNewAgent(): DatasetBundle {
   };
 }
 
+// ---------------------------------------------------------------------------
+// E — shared physical-cash shortage: simultaneous cash-out demand across BOTH
+// providers against a thin shared cash pool (zero/negative margin).
+// ---------------------------------------------------------------------------
+export function buildSharedCashShortage(): DatasetBundle {
+  const rng = newRng("E_shared_cash_shortage");
+  const agents = buildAgents(rng, AGENT_COUNT);
+  const target = agents[10];
+  // healthy enough for normal traffic, but the simultaneous spike exceeds it
+  const openingCash = 120_000;
+  const spikeHour = 9 * 24 + 14; // day 9, 14:00
+  const txs = genAllBaseline(rng, agents);
+
+  // ~160k of near-simultaneous cash-out demand split across bKash AND Nagad in a
+  // ~10-min span — combined demand exceeds the ~120k shared cash on hand.
+  const spanMin = 10;
+  for (const p of PROVIDERS) {
+    txs.push(
+      ...injectBurst(rng, target.agentId, p, {
+        count: 8,
+        startHour: spikeHour,
+        spanMin,
+        amountBase: 10_000,
+        amountSigma: 0.05,
+        customerIds: target.customerPool,
+        cashOutProb: 1, // all cash-out -> draws the shared physical cash pool
+      }),
+    );
+  }
+
+  const balances = assembleBalances(agents, txs);
+  const cash = assembleCash(agents, txs, { openingOverride: { [target.agentId]: openingCash } });
+  return {
+    scenario: "E_shared_cash_shortage",
+    transactions: txs,
+    balances,
+    cash,
+    label: {
+      scenario: "E_shared_cash_shortage",
+      shouldAlert: true,
+      anomalyType: "shared_cash_shortage",
+      targetAgentId: target.agentId,
+      // agent-level, cross-provider — no single targetProvider
+      windowStart: isoAt(spikeHour),
+      windowEnd: isoAt(spikeHour + 1),
+      tripsSignals: ["shared_cash_multiprovider", "cash_margin_low"],
+      rationale:
+        "~160k BDT of simultaneous cash-out demand across bKash AND Nagad within 10 min against ~120k physical cash on hand — combined multi-provider demand exceeds the shared cash pool (negative margin). Distinct from LIQUIDITY_DRAIN, which watches per-provider e-float.",
+    },
+  };
+}
+
 export const BUILDERS: Array<() => DatasetBundle> = [
   buildBaseline,
   buildQuietDrain,
@@ -485,4 +569,5 @@ export const BUILDERS: Array<() => DatasetBundle> = [
   buildHnSalaryDay,
   buildHnCorporate,
   buildHnNewAgent,
+  buildSharedCashShortage,
 ];

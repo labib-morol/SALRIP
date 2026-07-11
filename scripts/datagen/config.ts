@@ -42,6 +42,14 @@ export const CUSTOMER_POOL = 260;
 export const OPENING_FLOAT_MIN = 180_000;
 export const OPENING_FLOAT_MAX = 420_000;
 
+/**
+ * Opening PHYSICAL cash band per agent (a SINGLE shared pool — every provider's
+ * cash-out draws from it). Also the daily restock target. Comfortably above
+ * normal short-window cash-out demand so healthy agents never look short.
+ */
+export const OPENING_CASH_MIN = 250_000;
+export const OPENING_CASH_MAX = 500_000;
+
 export const STATUS_FAIL_RATE = 0.03;
 export const STATUS_PENDING_RATE = 0.015;
 
