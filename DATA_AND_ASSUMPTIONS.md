@@ -20,13 +20,21 @@ Same `MASTER_SEED` (`scripts/datagen/config.ts`) → byte-identical output.
 - `status`: `SUCCESS | FAILED | PENDING`.
 
 **Balance** — `agentId, provider, timestamp, openingBalance, currentBalance`
-- Models the agent's **e-float** per provider, 6-hourly snapshots derived by
+- Models the agent's **per-provider e-float**, 6-hourly snapshots derived by
   walking the transaction ledger. Floored at 0 (an agent cannot disburse e-float
   it does not hold). Agents **actively manage** float: a managed agent rebalances
   back to its baseline float at the start of each day (a bank visit), so its daily
   opening is flat. A drain is precisely a *failure* of that management — scenario A
   leaves one leg unmanaged so the decline accumulates and is detectable against the
   otherwise-flat daily-opening baseline.
+
+**Cash** — `agentId, timestamp, openingCash, currentCash`
+- Models the agent's **single shared pool of physical cash** — one drawer per agent,
+  **not** per provider. *Every* provider's `CASH_OUT` draws it down, so bKash and
+  Nagad demand compete for the same cash. 6-hourly snapshots, floored at 0, with a
+  daily restock to the opening target (like the e-float rebalance). This is a
+  distinct resource from e-float and is what makes scenario E (below) possible:
+  each provider's e-float can be healthy while the shared cash drawer runs dry.
 
 **Alert / Case** — the downstream flow (scenario D).
 
@@ -77,6 +85,29 @@ window, **then** isolate the near-identical sub-cluster — not average the whol
 window. `npm run generate` prints both `clusterCV` and `windowCV` to make this
 explicit.
 
+### Shared physical-cash shortage (scenario E)
+
+This detector operates on the **Cash** series, not e-float, and answers a different
+question: can the agent physically pay out what customers are simultaneously
+demanding across *all* providers at once?
+
+| Signal | Definition | Boundary |
+|---|---|---|
+| Multi-provider concurrency | distinct providers with a `CASH_OUT` inside one rolling 15-min window | must be **≥ 2** — single-provider demand is not a "shared" shortage |
+| Cash margin | combined cash-out demand in the window ÷ shared physical cash on hand | `≥ 0.80` = approaching shortage (MEDIUM); `≥ 1.00` = zero/negative margin (HIGH) |
+
+**Why this is distinct from `LIQUIDITY_DRAIN`.** A drain is a slow, per-provider fall
+in *e-float* over days. A shortage is a fast, *cross-provider* spike in *physical cash*
+demand within minutes, against a resource that no single provider's balance reveals.
+An agent can pass every per-provider e-float check and still be unable to serve the
+next customer because the one cash drawer is empty. Modelling cash as a shared pool is
+what surfaces it.
+
+**No false positive on payday.** The `hn_salary_day` hard negative also has heavy
+cash-out demand, but a competent agent restocks physical cash for a known payday rush;
+the generator gives that agent a deliberately larger opening cash pool, so demand never
+exceeds it and the detector correctly stays silent.
+
 ## Datasets
 
 | Dataset | shouldAlert | What it is |
@@ -86,6 +117,7 @@ explicit.
 | `B_fraud_burst` | **yes** | 34 near-identical ~24k disbursements to 3 accounts in 90 min, draining Nagad float to exhaustion. Trips all three signals. |
 | `C_stale_feed` | **yes** | bKash balance feed freezes (repeated value + non-advancing timestamp) for 48h while transactions keep posting → balance contradicts the ledger. |
 | `D_alert_case` | **yes** | Scenario B promoted to an `Alert`, routed to an analyst as a `Case` with a 4h SLA. |
+| `E_shared_cash_shortage` | **yes** | ~160k BDT of near-simultaneous **cash-out** demand across **bKash AND Nagad** within ~10 min against ~120k physical cash on hand → combined demand exceeds the shared drawer (negative margin). Per-provider e-float stays healthy; only the shared-cash view catches it. |
 | `normal_high_volume` | no | Organic 2.4× demand spike: high velocity, **high** CV, **high** diversity. Measures velocity-signal FPR. |
 | `hn_salary_day` | no | Payday: ~40 near-identical 15k cash-outs but from ~40 **different** customers. Trips clustering, **not** concentration. |
 | `hn_corporate_disbursement` | no | Legit corporate payer: few customers, high-value, fast, **varied** amounts. Trips velocity **and** concentration. |
@@ -108,10 +140,14 @@ We do not hide any of these behind a mirror-image negative set.
 ## Detection engine & measured results
 
 `src/lib/analytics/` consumes these datasets and `npm run analyze` reports
-detection vs the labels. Current result on the 9 datasets: **recall 100%,
-false-positive rate 0%, precision 100%**. Detectors: fraud (all-three, signals
-measured on the isolated cluster), liquidity drain (daily-opening decline +
-aggregate-masking check), stale feed (frozen snapshots + tx/balance conflict).
+detection vs the labels. Current result on the 10 datasets: **recall 100%,
+false-positive rate 0%, precision 100%** (accuracy 100%). Detectors: fraud
+(all-three, signals measured on the isolated cluster), liquidity drain
+(daily-opening decline + aggregate-masking check), stale feed (frozen snapshots +
+tx/balance conflict), and shared physical-cash shortage (multi-provider
+simultaneous cash-out demand vs the shared drawer). A "positive" counts only when
+an alert lands on the labelled **target agent** (and provider, when the label
+specifies one), so a right-answer-for-the-wrong-agent does not score as a hit.
 
 ## Limitations
 
