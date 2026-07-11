@@ -1,26 +1,148 @@
 @import "tailwindcss";
 
+/*
+  Visual identity: "Vault" — a mobile-money operations console.
+  Institutional, dense, serious. NOT a consumer app.
+
+  Color system has three DISTINCT categorical channels that must never
+  be confused with one another:
+    1. Brand      — deep vault-teal. The app's own identity / chrome.
+    2. Provider   — bKash magenta / Nagad orange. Identity of WHOSE money.
+    3. Severity   — red / amber / slate. HOW urgent. Always filled + labelled.
+  Provider is shown as a marked tag (shape + name), severity as a filled
+  badge, so an orange Nagad tag never reads as an amber MEDIUM severity.
+*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #eef1f2;
+  --surface: #ffffff;
+  --surface-2: #f7f9f9;
+  --border: #dbe2e3;
+  --border-strong: #c5d0d1;
+
+  --ink: #10201e;
+  --ink-2: #334744;
+  --muted: #5c6f6c;
+  --muted-2: #849794;
+
+  /* Brand — vault teal */
+  --brand: #0e3a34;
+  --brand-hover: #12514a;
+  --brand-ink: #eaf3f1;
+  --brand-accent: #caa14a; /* brass hairline, used sparingly */
+
+  /* Providers */
+  --bkash: #e2136e;
+  --bkash-soft: #fde7f0;
+  --nagad: #f5821f;
+  --nagad-soft: #fdeedd;
+
+  /* Severity */
+  --sev-high: #c4162b;
+  --sev-high-soft: #fbe4e6;
+  --sev-med: #b26b00;
+  --sev-med-soft: #fbeecf;
+  --sev-low: #556a74;
+  --sev-low-soft: #e7edf0;
+
+  /* Status (workflow) — neutral ghosts, one accent for escalated */
+  --ok: #157a4e;
+  --ok-soft: #e0f0e6;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-accent: var(--brand-accent);
+
+  --color-bkash: var(--bkash);
+  --color-bkash-soft: var(--bkash-soft);
+  --color-nagad: var(--nagad);
+  --color-nagad-soft: var(--nagad-soft);
+
+  --color-sev-high: var(--sev-high);
+  --color-sev-high-soft: var(--sev-high-soft);
+  --color-sev-med: var(--sev-med);
+  --color-sev-med-soft: var(--sev-med-soft);
+  --color-sev-low: var(--sev-low);
+  --color-sev-low-soft: var(--sev-low-soft);
+
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --radius-card: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv05", "ss01";
+}
+
+/* Tabular figures for all monetary / numeric readouts */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+}
+
+/* Bangla copy renders in a Bengali-optimised face */
+.bangla {
+  font-family: var(--font-bengali), var(--font-sans);
+  line-height: 1.85;
+}
+
+/* Faint dotted grid for empty-state canvases, so "empty" reads as designed */
+.canvas-grid {
+  background-image: radial-gradient(var(--border-strong) 0.5px, transparent 0.5px);
+  background-size: 16px 16px;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+  animation: shimmer 1.4s infinite;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 6px;
+  border: 2px solid var(--bg);
 }
