@@ -1,0 +1,22 @@
+#!/bin/sh
+# Capture the real user prompts for this commit and stage them so they land IN
+# THIS commit (pre-commit runs before git snapshots the tree — prepare-commit-msg
+# would be too late). Records the trailer line for prepare-commit-msg to append.
+# Never blocks a commit.
+REPO_ROOT=$(git rev-parse --show-toplevel) || exit 0
+GITDIR=$(git rev-parse --git-dir)
+SINCE=$(git log -1 --format=%cI 2>/dev/null || echo "")
+
+rm -f "$GITDIR/PROMPT_TRAILER"
+
+OUT=$(python "$REPO_ROOT/scripts/capture_prompt.py" \
+        --repo "$REPO_ROOT" --since "$SINCE" --outdir "$REPO_ROOT/.prompts")
+REL=$(printf '%s' "$OUT" | cut -f1)
+
+if [ -n "$REL" ] && [ -f "$REPO_ROOT/$REL" ]; then
+  # Stage the whole dir: new .md + .json AND any sidecar whose sha a previous
+  # post-commit filled in. Included in this commit because pre-commit runs first.
+  git add "$REPO_ROOT/.prompts" 2>/dev/null
+  printf '%s' "$OUT" > "$GITDIR/PROMPT_TRAILER"
+fi
+exit 0

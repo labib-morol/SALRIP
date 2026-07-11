@@ -1,0 +1,41 @@
+# Self-hosted SonarQube for per-commit scans.
+#   docker compose -f docker-compose.sonar.yml up -d
+# First boot takes ~1-2 min. Then open http://localhost:9000 (admin/admin).
+#
+# Windows note: the Elasticsearch inside SonarQube needs vm.max_map_count>=262144
+# in the WSL2 backend. If the container restarts on boot, run once in an admin
+# PowerShell:  wsl -d docker-desktop sysctl -w vm.max_map_count=262144
+services:
+  sonarqube:
+    image: sonarqube:community
+    depends_on:
+      - sonar-db
+    ports:
+      - "9000:9000"
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://sonar-db:5432/sonar
+      SONAR_JDBC_USERNAME: sonar
+      SONAR_JDBC_PASSWORD: sonar
+    volumes:
+      - sonar_data:/opt/sonarqube/data
+      - sonar_logs:/opt/sonarqube/logs
+      - sonar_extensions:/opt/sonarqube/extensions
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+
+  sonar-db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: sonar
+      POSTGRES_PASSWORD: sonar
+      POSTGRES_DB: sonar
+    volumes:
+      - sonar_pg:/var/lib/postgresql/data
+
+volumes:
+  sonar_data:
+  sonar_logs:
+  sonar_extensions:
+  sonar_pg:

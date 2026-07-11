@@ -36,6 +36,14 @@ yarn-error.log*
 # vercel
 .vercel
 
+# sonarqube (scan logs + scanner workdir; the audit trail in .prompts/ IS tracked)
+/.sonar/
+/.scannerwork/
+
+# generated datasets — reproducible via `npm run generate`.
+# Remove this line if the deployed app must ship static data.
+/data/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -1,0 +1,27 @@
+#!/bin/sh
+# Fire a SonarQube scan in the background. NON-BLOCKING: the commit is already
+# done; this must never delay or fail the commit.
+REPO_ROOT=$(git rev-parse --show-toplevel) || exit 0
+SHA=$(git rev-parse --short HEAD 2>/dev/null || echo "unknown")
+
+# --- prompt sidecar: fill in this commit's sha (unknowable until now) ---------
+# Decoupled from SonarQube below. The updated sidecar is swept into the next
+# commit by prepare-commit-msg (a commit cannot contain its own hash).
+MD=$(git log -1 --format=%B | sed -n 's/^Prompt-Log: \([^ ]*\).*/\1/p' | head -1)
+if [ -n "$MD" ]; then
+  JSON="${MD%.md}.json"
+  if [ -f "$REPO_ROOT/$JSON" ]; then
+    python -c "import json,sys; p=sys.argv[1]; d=json.load(open(p,encoding='utf-8')); d['commit']=sys.argv[2]; f=open(p,'w',encoding='utf-8'); json.dump(d,f,indent=2); f.write('\n')" \
+      "$REPO_ROOT/$JSON" "$SHA" 2>/dev/null
+  fi
+fi
+
+# --- SonarQube (separate concern) --------------------------------------------
+mkdir -p "$REPO_ROOT/.sonar"
+LOG="$REPO_ROOT/.sonar/scan-$SHA.log"
+
+# Detach so the terminal returns immediately.
+( sh "$REPO_ROOT/scripts/sonar-scan.sh" "$SHA" >"$LOG" 2>&1 & ) >/dev/null 2>&1
+
+echo "SonarQube scan launched in background -> .sonar/scan-$SHA.log"
+exit 0

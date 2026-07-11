@@ -1,0 +1,21 @@
+#!/bin/sh
+# Append the Prompt-Log trailer using the line recorded by the pre-commit hook
+# (which did the capture + staging). Keep this hook message-only. Never blocks.
+COMMIT_MSG_FILE="$1"
+SOURCE="$2"
+case "$SOURCE" in
+  merge|squash) exit 0 ;;
+esac
+
+GITDIR=$(git rev-parse --git-dir) || exit 0
+TF="$GITDIR/PROMPT_TRAILER"
+[ -f "$TF" ] || exit 0
+
+REL=$(cut -f1 "$TF")
+SUM=$(cut -f2- "$TF")
+rm -f "$TF"
+
+if [ -n "$REL" ] && ! grep -q "^Prompt-Log:" "$COMMIT_MSG_FILE" 2>/dev/null; then
+  printf '\nPrompt-Log: %s — "%s"\n' "$REL" "$SUM" >> "$COMMIT_MSG_FILE"
+fi
+exit 0

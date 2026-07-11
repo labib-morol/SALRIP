@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate": "node --experimental-strip-types scripts/datagen/index.ts"
   },
   "dependencies": {
     "next": "16.2.10",
