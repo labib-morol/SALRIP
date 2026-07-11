@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate": "node --experimental-strip-types scripts/datagen/index.ts"
+    "generate": "node --experimental-strip-types scripts/datagen/index.ts",
+    "analyze": "node --experimental-strip-types scripts/analyze.ts"
   },
   "dependencies": {
     "next": "16.2.10",

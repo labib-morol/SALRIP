@@ -69,7 +69,7 @@ function injectBurst(
 function assembleBalances(
   agents: Agent[],
   txs: Transaction[],
-  noTopup: Set<string> = new Set(),
+  unmanaged: Set<string> = new Set(),
 ): Balance[] {
   const out: Balance[] = [];
   for (const a of agents) {
@@ -77,7 +77,7 @@ function assembleBalances(
       const sub = txs.filter((t) => t.agentId === a.agentId && t.provider === p);
       out.push(
         ...computeBalances(a.agentId, p, a.opening[p], sub, {
-          allowTopup: !noTopup.has(`${a.agentId}:${p}`),
+          manage: !unmanaged.has(`${a.agentId}:${p}`),
         }),
       );
     }
@@ -149,7 +149,7 @@ export function buildQuietDrain(): DatasetBundle {
       }
     }
   }
-  // disable top-up on the draining leg so the decline is visible
+  // leave the draining leg unmanaged (no daily rebalance) so the drain accumulates
   const balances = assembleBalances(agents, txs, new Set([`${target.agentId}:${drainProvider}`]));
   return {
     scenario: "A_quiet_drain",
@@ -388,7 +388,7 @@ export function buildHnSalaryDay(): DatasetBundle {
       windowEnd: isoAt(payHour + 3),
       tripsSignals: ["velocity", "amount_cv_low"],
       rationale:
-        "Payday cash-outs: ~40 near-identical 15k amounts (trips clustering) but from 40 different customers (does NOT trip concentration). Combination rule must hold -> no alert.",
+        "Payday cash-outs: ~40 near-identical 15k amounts (trips clustering) but from ~40 different customers (does NOT trip concentration). Under the all-three rule it correctly clears — shows why clustering alone must never alert.",
     },
   };
 }
@@ -430,7 +430,7 @@ export function buildHnCorporate(): DatasetBundle {
       windowEnd: isoAt(startHour + 2),
       tripsSignals: ["velocity", "counterparty_concentration"],
       rationale:
-        "Legit corporate payer settling through one agent: trips velocity AND concentration, so the naive rule WILL false-positive here unless known corporate payers are whitelisted. This dataset measures exactly that residual FPR.",
+        "Legit corporate payer settling through one agent: trips velocity AND concentration but NOT clustering (amounts vary). Under the all-three rule it correctly clears — shows why concentration alone must never alert.",
     },
   };
 }

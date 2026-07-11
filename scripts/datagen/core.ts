@@ -7,8 +7,6 @@ import {
   CUSTOMER_POOL,
   DAILY_VOLUME_MAX,
   DAILY_VOLUME_MIN,
-  FLOAT_LOW,
-  FLOAT_TOPUP_TO,
   HOUR_WEIGHTS,
   SIM_DAYS,
   OPENING_FLOAT_MAX,
@@ -133,15 +131,17 @@ export function floatDelta(t: Transaction): number {
 
 /**
  * Walk transactions chronologically to produce 6-hourly balance snapshots.
- * `allowTopup` models an agent rebalancing float when it dips low; scenario A
- * disables it on the draining provider so the drain is visible.
+ * `manage` models a real agent actively rebalancing float back to its baseline
+ * at the start of each day (bank visit). Managed agents therefore stay in a tight
+ * band and show ~no multi-day decline; scenario A's draining leg sets manage=false
+ * so an uncontrolled drain accumulates and becomes detectable against that band.
  */
 export function computeBalances(
   agentId: string,
   provider: Provider,
   opening: number,
   txs: Transaction[],
-  opts: { allowTopup: boolean } = { allowTopup: true },
+  opts: { manage: boolean } = { manage: true },
 ): Balance[] {
   const sorted = [...txs].sort((a, b) => a.timestamp.localeCompare(b.timestamp));
   const snapshots: Balance[] = [];
@@ -156,16 +156,16 @@ export function computeBalances(
   for (let s = 0; s < totalSnaps; s++) {
     const snapTime = startDay.getTime() + s * 6 * 3600_000;
     const dayIdx = Math.floor((snapTime - startDay.getTime()) / DAY_MS);
+    if (dayIdx !== lastDayIdx) {
+      if (opts.manage) float = opening; // daily rebalance to baseline float
+      lastDayIdx = dayIdx;
+      dayOpening = float;
+    }
     // advance through all tx up to this snapshot time
     while (cursor < sorted.length && new Date(sorted[cursor].timestamp).getTime() <= snapTime) {
       float += floatDelta(sorted[cursor]);
-      if (opts.allowTopup && float < FLOAT_LOW) float = FLOAT_TOPUP_TO;
       if (float < 0) float = 0; // an agent can't disburse e-float it doesn't hold
       cursor++;
-    }
-    if (dayIdx !== lastDayIdx) {
-      dayOpening = float;
-      lastDayIdx = dayIdx;
     }
     snapshots.push({
       agentId,

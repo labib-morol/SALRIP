@@ -38,13 +38,9 @@ export const AMOUNT_SIGMA = 0.62; // CV ~= sqrt(exp(sigma^2)-1) ~= 0.67
 /** Customer pool per agent — large pool -> high counterparty diversity in normal traffic. */
 export const CUSTOMER_POOL = 260;
 
-/** Opening e-float band per agent+provider. */
+/** Opening e-float band per agent+provider (also the daily rebalance target). */
 export const OPENING_FLOAT_MIN = 180_000;
 export const OPENING_FLOAT_MAX = 420_000;
-
-/** Float health band; normal agents top up when they dip below the low mark. */
-export const FLOAT_LOW = 60_000;
-export const FLOAT_TOPUP_TO = 350_000;
 
 export const STATUS_FAIL_RATE = 0.03;
 export const STATUS_PENDING_RATE = 0.015;

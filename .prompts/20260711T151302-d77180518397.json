@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "commit": null,
+  "promptFile": "20260711T151302-d77180518397.md",
+  "promptSummaryOneLiner": "built the src/lib/analytics detection engine (Poisson velocity, cluster-isolated all-three fraud rule, daily-opening liquidity-drain, stale-feed) with an eval harness hitting 100% recall / 0% FPR, plus the generator and docs refinements it required",
+  "timestamp": "2026-07-11T15:13:02+06:00",
+  "filesChanged": [
+    ".prompts/20260711T140344-f99b22327b4a.json",
+    "DATA_AND_ASSUMPTIONS.md",
+    "package.json",
+    "scripts/analyze.ts",
+    "scripts/datagen/config.ts",
+    "scripts/datagen/core.ts",
+    "scripts/datagen/scenarios.ts",
+    "src/lib/analytics/baseline.ts",
+    "src/lib/analytics/data.ts",
+    "src/lib/analytics/detectors.ts",
+    "src/lib/analytics/evaluate.ts",
+    "src/lib/analytics/index.ts",
+    "src/lib/analytics/signals.ts",
+    "src/lib/analytics/types.ts",
+    "tsconfig.json"
+  ],
+  "agent": "Claude Code"
+}

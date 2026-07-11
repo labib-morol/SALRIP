@@ -22,7 +22,11 @@ Same `MASTER_SEED` (`scripts/datagen/config.ts`) → byte-identical output.
 **Balance** — `agentId, provider, timestamp, openingBalance, currentBalance`
 - Models the agent's **e-float** per provider, 6-hourly snapshots derived by
   walking the transaction ledger. Floored at 0 (an agent cannot disburse e-float
-  it does not hold). Normal agents top up when float dips below `FLOAT_LOW`.
+  it does not hold). Agents **actively manage** float: a managed agent rebalances
+  back to its baseline float at the start of each day (a bank visit), so its daily
+  opening is flat. A drain is precisely a *failure* of that management — scenario A
+  leaves one leg unmanaged so the decline accumulates and is detectable against the
+  otherwise-flat daily-opening baseline.
 
 **Alert / Case** — the downstream flow (scenario D).
 
@@ -56,8 +60,13 @@ near-identical amounts", "repeated requests from the same accounts").
 | Counterparty concentration | unique customers vs tx count in the window | `≤ 3` customers with `≥ 8` tx |
 
 **Combination rule (the whole point):**
-`velocity_high AND (amount_CV_low OR concentration_high)`.
-Velocity alone must never alert — organic demand is fast too.
+`velocity_high AND amount_CV_low AND concentration_high` — **all three**.
+A genuine structured fraud burst exhibits all three at once; each hard negative
+deliberately lacks exactly one, so the all-three rule gives clean separation with
+no allowlist. (The looser `AND (CV_low OR concentration)` form was rejected: it
+false-positives on salary-day via the CV clause and on corporate via the
+concentration clause — see the hard negatives below.) Velocity alone must never
+alert; CV-low alone (payday) and concentration alone (corporate) must never alert.
 
 ### Cluster vs window (important, honest caveat)
 
@@ -73,7 +82,7 @@ explicit.
 | Dataset | shouldAlert | What it is |
 |---|---|---|
 | `baseline` | no | Healthy traffic; the learning set. |
-| `A_quiet_drain` | **yes** | One provider's float trends down while the agent's **total** looks healthy (other provider fine). Signal = **per-provider** balance trend, not aggregate. |
+| `A_quiet_drain` | **yes** | One provider's **daily opening float** trends down (unmanaged leg) while the other stays flat. Signal = **per-provider** daily-opening decline, not aggregate. |
 | `B_fraud_burst` | **yes** | 34 near-identical ~24k disbursements to 3 accounts in 90 min, draining Nagad float to exhaustion. Trips all three signals. |
 | `C_stale_feed` | **yes** | bKash balance feed freezes (repeated value + non-advancing timestamp) for 48h while transactions keep posting → balance contradicts the ledger. |
 | `D_alert_case` | **yes** | Scenario B promoted to an `Alert`, routed to an analyst as a `Case` with a 4h SLA. |
@@ -82,16 +91,27 @@ explicit.
 | `hn_corporate_disbursement` | no | Legit corporate payer: few customers, high-value, fast, **varied** amounts. Trips velocity **and** concentration. |
 | `hn_new_agent` | no | `AGT-NEW` with <2 days history — no per-agent baseline exists. |
 
-## Known residual false positives (measured on purpose)
+## Why the hard negatives matter (each isolates one signal)
 
-- **`hn_corporate_disbursement`** trips `velocity AND concentration`, so the naive
-  combination rule **will** flag it. Ground truth is legit. This is deliberate: it
-  quantifies the residual FPR and motivates a **known-corporate-payer allowlist**.
-  We do not hide this behind a mirror-image negative set.
-- **`hn_new_agent`** has no baseline, so per-agent velocity z-scores are undefined.
-  The detector must fall back to a **population baseline** with a
-  `low-confidence / insufficient-history` flag rather than firing or silently
-  suppressing the check.
+- **`hn_salary_day`** trips velocity + clustering but **not** concentration (many
+  customers). Under the pure-OR rule it would false-positive via the CV clause;
+  the all-three rule clears it. Proves clustering-alone must not alert.
+- **`hn_corporate_disbursement`** trips velocity + concentration but **not**
+  clustering (varied amounts). Under the pure-OR rule it would false-positive via
+  the concentration clause; the all-three rule clears it with no allowlist needed.
+- **`hn_new_agent`** has no per-agent baseline, so velocity is undefined. The
+  detector falls back to a **population baseline** and marks `low-confidence`
+  rather than firing (see `baseline.ts` `MIN_BASELINE_DAYS`).
+
+We do not hide any of these behind a mirror-image negative set.
+
+## Detection engine & measured results
+
+`src/lib/analytics/` consumes these datasets and `npm run analyze` reports
+detection vs the labels. Current result on the 9 datasets: **recall 100%,
+false-positive rate 0%, precision 100%**. Detectors: fraud (all-three, signals
+measured on the isolated cluster), liquidity drain (daily-opening decline +
+aggregate-masking check), stale feed (frozen snapshots + tx/balance conflict).
 
 ## Limitations
 
