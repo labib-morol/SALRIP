@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "commit": null,
+  "commit": "0701031",
   "promptFile": "20260712T062131-rulebook-audit.md",
   "promptSummaryOneLiner": "Complete the final rulebook audit and live-demo readiness pass with connected evidence, explicit confidence, server-enforced persona permissions, traceable case routing, responsible-design documentation, and exact Scenario A-D click paths.",
   "timestamp": "2026-07-12T06:21:31+06:00",
