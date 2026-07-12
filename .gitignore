@@ -40,10 +40,11 @@ yarn-error.log*
 /.sonar/
 /.scannerwork/
 
-# AI agent skills — local dev tooling, vendored on disk but not a project deliverable.
-# (The prompt-capture hooks in .githooks/.codex and the audit trail in .prompts/ ARE tracked.)
-/.claude/skills/
-/.agents/skills/
+# AI agent tooling — local only, not a project deliverable.
+# (The git-driven prompt-capture hooks in .githooks/ and the audit trail in .prompts/ ARE tracked.)
+/.claude/
+/.agents/
+/.codex/
 
 # typescript
 *.tsbuildinfo
