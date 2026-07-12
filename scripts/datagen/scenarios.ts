@@ -18,11 +18,9 @@ import {
   PROVIDERS,
   SIM_DAYS,
   SIM_START,
-  THRESHOLDS,
 } from "./config.ts";
 
 const HOUR_MS = 3600_000;
-const DAY_MS = 24 * HOUR_MS;
 const isoAt = (hoursFromStart: number) =>
   new Date(SIM_START.getTime() + hoursFromStart * HOUR_MS).toISOString();
 
