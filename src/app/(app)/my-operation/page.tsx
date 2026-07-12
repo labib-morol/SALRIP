@@ -132,7 +132,7 @@ function ProviderFloatCard({ p }: { p: AgentProvider }) {
     <Card className="p-4">
       <div className="flex items-center justify-between">
         <ProviderTag provider={p.provider} />
-        {p.reducedConfidence ? <FeedDelayedChip /> : <span className="text-[11px] text-muted-2">e-float</span>}
+        <ConfidenceBadge level={p.reducedConfidence ? "reduced" : "high"} compact />
       </div>
       <div className="tnum mt-3 text-2xl font-semibold text-ink">{taka(p.float)}</div>
       <div className="mt-2 flex items-end justify-between">
@@ -140,19 +140,6 @@ function ProviderFloatCard({ p }: { p: AgentProvider }) {
         <Sparkline data={p.series} color={meta.color} width={104} height={30} />
       </div>
     </Card>
-  );
-}
-
-/** Marks a balance whose feed is stale/conflicting, so the number isn't read as exact. */
-function FeedDelayedChip() {
-  return (
-    <span
-      className="inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium"
-      style={{ color: "var(--sev-med)", borderColor: "var(--sev-med)", background: "var(--sev-med-soft)" }}
-      title="This balance feed looks delayed — treat the figure as indicative"
-    >
-      <span aria-hidden>◑</span> Feed delayed
-    </span>
   );
 }
 

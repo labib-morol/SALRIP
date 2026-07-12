@@ -142,9 +142,10 @@ message (`agentAdvisory()` in `display.ts`) so the agent view never depends on a
 ### 4. Case coordination (live over HTTP) — `/api/cases`
 
 ```
-Console / client (actor = signed-in persona)
-  → POST /api/cases                  promote a DetectionAlert → Case (Open/Assigned)
+Console / client (sends alert ID or requested transition; never supplies actor)
+  → POST /api/cases                  resolve engine alert ID → Case (Open)
   → PATCH /api/cases/[id]            reassign, transition status, and/or attach a note
+        → src/lib/auth/server.ts     derive persona + role server-side; deny forbidden actions
         → src/lib/cases/promote.ts   caseFromAlert(): SLA by severity (HIGH 4h / MED 12h / LOW 24h)
         → src/lib/cases/stateMachine.ts  validate transition (illegal move → 409)
         → src/lib/cases/repo.ts      update case + append immutable case_events row (actor + note)
@@ -192,8 +193,10 @@ reviewer needs.
   the scoping runs in the route handler, not just the UI.
 - **The type name never reaches the model.** The explainer sends a neutral behavioural
   descriptor, not `"FRAUD_BURST"`, and a post-generation guard is the backstop.
-- **Cases are server-authored only.** RLS denies direct client access; all writes go
-  through the `/api/cases` handlers using the service-role key.
+- **Cases are server-authored and role-authorised.** RLS denies direct client access;
+  handlers derive the audit actor from the persona cookie, enforce coordinator/analyst
+  permissions, and resolve alert evidence from an engine-owned ID before using the
+  service-role key.
 - **Reliability is visible, not silent.** A stale/conflicting feed marks the affected
   balance ("Feed delayed") and any promoted alert carries a reduced-confidence banner, so
   degraded data never reads as a confident conclusion.

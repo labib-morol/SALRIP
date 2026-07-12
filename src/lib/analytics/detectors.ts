@@ -41,6 +41,26 @@ export function detectFraud(ds: Dataset): DetectionAlert[] {
     const cluster = dominantCluster(windowTx);
 
     if (isClustered(cluster) && isConcentrated(cluster)) {
+      const balanceSeries = ds.balances
+        .filter((b) => b.agentId === agentId && b.provider === provider)
+        .sort((a, b) => a.timestamp.localeCompare(b.timestamp));
+      const before = [...balanceSeries].reverse().find((b) => b.timestamp <= lo);
+      const after = balanceSeries.find((b) => b.timestamp >= hi);
+      const evidence: DetectionAlert["evidence"] = {
+        peakVelocity: vel.peakCount,
+        expectedVelocity: Number(vel.expected.toFixed(2)),
+        clusterSize: cluster.size,
+        clusterCv: Number(cluster.cv.toFixed(3)),
+        uniqueCustomers: cluster.uniqueCustomers,
+        amountCenter: cluster.amountCenter,
+      };
+      if (before && after) {
+        evidence.startingProviderFloat = before.currentBalance;
+        evidence.endingProviderFloat = after.currentBalance;
+        evidence.providerFloatDropPct = before.currentBalance > 0
+          ? Number((((before.currentBalance - after.currentBalance) / before.currentBalance) * 100).toFixed(1))
+          : 0;
+      }
       alerts.push({
         type: "FRAUD_BURST",
         agentId,
@@ -48,14 +68,7 @@ export function detectFraud(ds: Dataset): DetectionAlert[] {
         severity: "HIGH",
         windowStart: lo,
         windowEnd: hi,
-        evidence: {
-          peakVelocity: vel.peakCount,
-          expectedVelocity: Number(vel.expected.toFixed(2)),
-          clusterSize: cluster.size,
-          clusterCv: Number(cluster.cv.toFixed(3)),
-          uniqueCustomers: cluster.uniqueCustomers,
-          amountCenter: cluster.amountCenter,
-        },
+        evidence,
       });
     }
   }
@@ -85,7 +98,7 @@ function dailyOpening(balances: Balance[], days = DRAIN_WINDOW_DAYS): Array<[str
 export function detectLiquidityDrain(ds: Dataset): DetectionAlert[] {
   const balGroups = byAgentProvider(ds.balances);
   const alerts: DetectionAlert[] = [];
-  const declineByAgent = new Map<string, Map<Provider, number>>();
+  const openingsByAgent = new Map<string, Map<Provider, { start: number; end: number }>>();
 
   for (const [k, series] of balGroups) {
     const [agentId, provider] = k.split(":") as [string, Provider];
@@ -95,7 +108,10 @@ export function detectLiquidityDrain(ds: Dataset): DetectionAlert[] {
     const startOpen = opens[0][1];
     const endOpen = opens[opens.length - 1][1];
     const declineFrac = startOpen > 0 ? (startOpen - endOpen) / startOpen : 0;
-    (declineByAgent.get(agentId) ?? declineByAgent.set(agentId, new Map()).get(agentId)!).set(provider, declineFrac);
+    (openingsByAgent.get(agentId) ?? openingsByAgent.set(agentId, new Map()).get(agentId)!).set(
+      provider,
+      { start: startOpen, end: endOpen },
+    );
     if (declineFrac < DRAIN_DECLINE_FRAC) continue;
 
     const spanDays = opens.length - 1 || 1;
@@ -118,12 +134,16 @@ export function detectLiquidityDrain(ds: Dataset): DetectionAlert[] {
   }
 
   // aggregate-masking: does the agent's TOTAL opening float look healthy while
-  // one provider drains? (scenario A). Total decline << provider decline = masked.
+  // one provider drains? (scenario A). The aggregate stays below the same alert
+  // threshold even though one provider crosses it, so a total-only view hides risk.
   for (const a of alerts) {
-    const decl = declineByAgent.get(a.agentId);
-    if (!decl) continue;
-    const avg = PROVIDERS.reduce((s, p) => s + (decl.get(p) ?? 0), 0) / PROVIDERS.length;
-    a.evidence.maskedByAggregate = avg < DRAIN_DECLINE_FRAC / 2;
+    const openings = openingsByAgent.get(a.agentId);
+    if (!openings) continue;
+    const startTotal = PROVIDERS.reduce((sum, provider) => sum + (openings.get(provider)?.start ?? 0), 0);
+    const endTotal = PROVIDERS.reduce((sum, provider) => sum + (openings.get(provider)?.end ?? 0), 0);
+    const aggregateDecline = startTotal > 0 ? (startTotal - endTotal) / startTotal : 0;
+    a.evidence.aggregateOpeningDeclinePct = Number((aggregateDecline * 100).toFixed(1));
+    a.evidence.maskedByAggregate = aggregateDecline < DRAIN_DECLINE_FRAC;
   }
   return alerts;
 }

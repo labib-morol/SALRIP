@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { useApi } from "@/components/useApi";
 import { LoadingBlock, ErrorState } from "@/components/ui/States";
 import { StatusPill, SeverityBadge, ProviderMark } from "@/components/ui/Badges";
-import { alertTypeLabel, formatDateTime, relativeTime, agentArea } from "@/lib/display.ts";
+import { alertTypeLabel, formatDateTime, relativeTime, agentArea, reviewRecommendation } from "@/lib/display.ts";
 import type { CaseEvent, CaseRecord } from "@/lib/cases/types.ts";
 
 interface CaseWithEvents extends CaseRecord {
@@ -103,9 +103,22 @@ export function CaseHistoryModal({ caseId, onClose }: { caseId: string; onClose:
                   <span className="text-border-strong">·</span>
                   <ProviderMark provider={data.provider} />
                 </div>
-                <div className="mt-2 text-xs text-muted-2">
-                  Assigned to {data.assignedTo ?? "— unassigned"} · opened {relativeTime(data.createdAt)}
+                <div className="mt-3 border-t border-border pt-3">
+                  <div className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-muted-2">Routing & decision</div>
+                  <dl className="grid gap-2 text-xs sm:grid-cols-[130px_1fr]">
+                    <dt className="text-muted">Received by</dt>
+                    <dd className="font-medium text-ink">Risk & Compliance review queue</dd>
+                    <dt className="text-muted">Current owner</dt>
+                    <dd className="font-medium text-ink">{data.assignedTo ?? "Ops Coordinator queue"}</dd>
+                    <dt className="text-muted">Provider escalation</dt>
+                    <dd className="font-medium text-ink">{data.provider} operations liaison</dd>
+                    <dt className="text-muted">Recommended next step</dt>
+                    <dd className="text-ink-2">{reviewRecommendation(data.alertType, data.provider)}</dd>
+                    <dt className="text-muted">Final status</dt>
+                    <dd><StatusPill status={data.status} /></dd>
+                  </dl>
                 </div>
+                <div className="mt-3 text-xs text-muted-2">Opened {relativeTime(data.createdAt)}</div>
               </div>
 
               {/* Timeline */}

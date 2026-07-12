@@ -41,7 +41,7 @@ export default function CasesPage() {
       const res = await fetch(`/api/cases/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ actor: persona.name, ...body }),
+        body: JSON.stringify(body),
       });
       const resBody = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(resBody?.error || `Update failed (${res.status})`);

@@ -129,6 +129,13 @@ alter table public.case_events enable row level security;
 All reads and writes go through the server-side Route Handlers, which use the service-role
 key and are the only code that touches the database
 (`src/lib/supabase/server.ts` is documented "never import this into client components").
+Those handlers call `currentPersona()` themselves: unauthenticated requests receive 401,
+agent/management case access receives 403, analysts may acknowledge or escalate but cannot
+assign or resolve, and coordinators retain full workflow authority
+(`src/app/api/cases/route.ts`, `src/app/api/cases/[id]/route.ts`). The server derives the
+audit actor from the signed-in persona cookie instead of trusting a client-supplied name.
+Case creation accepts an opaque alert ID and resolves the engine-owned alert on the server,
+so a browser cannot invent evidence or substitute a different provider.
 When credentials are absent the routes fail **safely and legibly** (`503 Supabase is not
 configured`) rather than in an undefined state.
 

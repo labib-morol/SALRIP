@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "commit": null,
+  "promptFile": "20260712T062131-rulebook-audit.md",
+  "promptSummaryOneLiner": "Complete the final rulebook audit and live-demo readiness pass with connected evidence, explicit confidence, server-enforced persona permissions, traceable case routing, responsible-design documentation, and exact Scenario A-D click paths.",
+  "timestamp": "2026-07-12T06:21:31+06:00",
+  "filesChanged": [
+    "ARCHITECTURE.md",
+    "DATA_AND_ASSUMPTIONS.md",
+    "PITCH_CONTENT.md",
+    "README.md",
+    "RESPONSIBLE_DESIGN.md",
+    "src/app/",
+    "src/components/",
+    "src/lib/"
+  ],
+  "agent": "Codex",
+  "source": "manual attachment recovery"
+}

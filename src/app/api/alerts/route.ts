@@ -7,6 +7,7 @@ import { currentPersona } from "@/lib/auth/server.ts";
 export async function GET(): Promise<Response> {
   try {
     const persona = await currentPersona();
+    if (!persona) return Response.json({ error: "Sign in required" }, { status: 401 });
     let alerts = collectAlerts();
     if (persona?.role === "agent" && persona.agentId) {
       alerts = alerts.filter((a) => a.agentId === persona.agentId);

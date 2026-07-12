@@ -56,7 +56,10 @@ async function writeEvent(
   if (error) throw new Error(`case_events insert failed: ${error.message}`);
 }
 
-export async function createCase(input: NewCaseInput): Promise<CaseRecord> {
+export async function createCase(
+  input: NewCaseInput,
+  opts: { actor?: string | null } = {},
+): Promise<CaseRecord> {
   const { data, error } = await supabaseServer()
     .from(CASES)
     .insert({
@@ -74,7 +77,7 @@ export async function createCase(input: NewCaseInput): Promise<CaseRecord> {
     .select()
     .single<CaseRow>();
   if (error || !data) throw new Error(`case insert failed: ${error?.message}`);
-  await writeEvent(data.id, null, data.status, input.assignedTo, "case created");
+  await writeEvent(data.id, null, data.status, opts.actor ?? null, "case created from alert review");
   return rowToCase(data);
 }
 

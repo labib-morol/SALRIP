@@ -8,6 +8,7 @@ import {
   listCaseEvents,
   transitionCase,
 } from "@/lib/cases";
+import { currentPersona } from "@/lib/auth/server.ts";
 
 type Ctx = { params: Promise<{ id: string }> };
 
@@ -22,6 +23,11 @@ function errorResponse(err: unknown): Response {
 // GET /api/cases/:id  (?events=1 to include the audit trail)
 export async function GET(request: Request, ctx: Ctx): Promise<Response> {
   try {
+    const persona = await currentPersona();
+    if (!persona) return Response.json({ error: "Sign in required" }, { status: 401 });
+    if (persona.role !== "coordinator" && persona.role !== "analyst") {
+      return Response.json({ error: "Case access is not available for this role" }, { status: 403 });
+    }
     const { id } = await ctx.params;
     const found = await getCase(id);
     if (!found) return Response.json({ error: `Case not found: ${id}` }, { status: 404 });
@@ -38,12 +44,17 @@ export async function GET(request: Request, ctx: Ctx): Promise<Response> {
 interface PatchBody {
   status?: CaseStatus;
   assignedTo?: string;
-  actor?: string;
   note?: string;
 }
 
 // PATCH /api/cases/:id — reassign and/or transition status
 export async function PATCH(request: Request, ctx: Ctx): Promise<Response> {
+  const persona = await currentPersona();
+  if (!persona) return Response.json({ error: "Sign in required" }, { status: 401 });
+  if (persona.role !== "coordinator" && persona.role !== "analyst") {
+    return Response.json({ error: "Case updates are not available for this role" }, { status: 403 });
+  }
+
   const { id } = await ctx.params;
   let body: PatchBody;
   try {
@@ -61,15 +72,21 @@ export async function PATCH(request: Request, ctx: Ctx): Promise<Response> {
   if (body.assignedTo == null && body.status == null) {
     return Response.json({ error: "provide `assignedTo` and/or `status`" }, { status: 400 });
   }
+  if (persona.role === "analyst" && body.assignedTo != null) {
+    return Response.json({ error: "Risk & Compliance cannot assign case ownership" }, { status: 403 });
+  }
+  if (persona.role === "analyst" && body.status !== "Acknowledged" && body.status !== "Escalated") {
+    return Response.json({ error: "Risk & Compliance may only acknowledge or escalate a case" }, { status: 403 });
+  }
 
   try {
     let result = await getCase(id);
     if (!result) throw new CaseNotFoundError(id);
     if (body.assignedTo != null) {
-      result = await assignCase(id, body.assignedTo, { actor: body.actor });
+      result = await assignCase(id, body.assignedTo, { actor: persona.name });
     }
     if (body.status != null) {
-      result = await transitionCase(id, body.status, { actor: body.actor, note: body.note });
+      result = await transitionCase(id, body.status, { actor: persona.name, note: body.note });
     }
     return Response.json(result);
   } catch (err) {

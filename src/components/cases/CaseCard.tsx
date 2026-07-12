@@ -36,6 +36,7 @@ export function CaseCard({
   const sla = c.status === "Resolved" ? null : slaRemaining(c.slaDueAt);
   const isOpen = c.status === "Open";
   const review = caseActions === "review";
+  const canAssign = caseActions === "full";
   // Open advances by *assigning* (which sets the assignee); other legal moves are status transitions.
   // Review-only roles (risk/compliance) may acknowledge or escalate, but not assign or resolve —
   // final ownership and closure stay with the operations team.
@@ -114,15 +115,15 @@ export function CaseCard({
             />
           ) : (
             <div className="flex flex-wrap gap-1.5">
-              {isOpen ? (
+              {isOpen && canAssign ? (
                 <ActionButton primary busy={busy} onClick={() => setAssigning(true)}>
                   Assign
                 </ActionButton>
-              ) : (
+              ) : !isOpen && canAssign ? (
                 <ActionButton busy={busy} onClick={() => setAssigning(true)}>
                   Reassign
                 </ActionButton>
-              )}
+              ) : null}
               {transitions.map((to) => {
                 const a = transitionAction(c.status, to);
                 // Resolve and Escalate capture a free-text note that persists to

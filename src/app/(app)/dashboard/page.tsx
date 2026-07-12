@@ -7,7 +7,7 @@ import { PageHeader } from "@/components/shell/PageHeader";
 import { Card } from "@/components/ui/Card";
 import { Sparkline } from "@/components/ui/Sparkline";
 import { LoadingBlock, ErrorState, InlineBanner } from "@/components/ui/States";
-import { ProviderTag } from "@/components/ui/Badges";
+import { ConfidenceBadge, ProviderTag } from "@/components/ui/Badges";
 import { taka, formatDateTime, PROVIDER_META } from "@/lib/display.ts";
 import type { Overview, ProviderOverview, Forecast } from "@/lib/overview.ts";
 
@@ -117,15 +117,7 @@ function ProviderCard({ p }: { p: ProviderOverview }) {
       </div>
       <div className="mt-1 flex items-center gap-2 text-xs text-muted">
         e-Float balance
-        {p.reducedConfidence ? (
-          <span
-            className="inline-flex items-center gap-1 rounded-full border px-1.5 py-0.5 text-[11px] font-medium"
-            style={{ color: "var(--sev-med)", borderColor: "var(--sev-med)", background: "var(--sev-med-soft)" }}
-            title="This balance feed looks delayed — treat the figure as indicative"
-          >
-            <span aria-hidden>◑</span> Feed delayed
-          </span>
-        ) : null}
+        <ConfidenceBadge level={p.reducedConfidence ? "reduced" : "high"} compact />
       </div>
       <div className="tnum mt-3 text-2xl font-semibold text-ink">{taka(p.float)}</div>
       <div className="mt-3 flex items-end justify-between">

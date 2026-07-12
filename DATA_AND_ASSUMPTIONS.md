@@ -157,3 +157,19 @@ specifies one), so a right-answer-for-the-wrong-agent does not score as a hit.
   rejected (`FAILED`) transactions. A richer model would fail tx on insufficient float.
 - Balance snapshots are 6-hourly; sub-window troughs can be partially masked at
   snapshot granularity.
+
+## Responsible interpretation and human-review boundary
+
+- **An anomaly is not proof of fraud or wrongdoing.** It is a statistical signal
+  that tells a trained person where to review evidence; it never establishes intent.
+- The measured 0% false-positive rate applies only to the ten seeded, labelled
+  datasets above. Real provider traffic will contain behaviours the simulation does
+  not model, so false positives are expected in production and thresholds would need
+  monitored calibration with provider-approved data.
+- Missing history, late feeds, and reconciliation conflicts reduce confidence. The
+  safe fallback is to show that uncertainty and confirm against authorised provider
+  records—not to infer guilt or take an automated action.
+- A human coordinator or risk analyst reviews evidence, contacts the appropriate
+  provider liaison where authorised, records notes, and owns escalation. SALRIP never
+  blocks, freezes, reverses, or approves a transaction, and only an operations
+  coordinator may close the internal review case.

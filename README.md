@@ -10,6 +10,10 @@ providers **without ever moving, merging, or controlling funds**.
 > across **10 labelled datasets** (4 injected anomalies, 1 alert→case flow, and
 > 4 deliberately hard negatives). Reproduce it in one command: `npm run analyze`.
 
+**Production target:** [salrip.vercel.app](https://salrip.vercel.app). Before a judged
+demo, confirm Vercel Deployment Protection is disabled for the production environment;
+the application itself uses its credential-free persona picker at `/login`.
+
 ---
 
 ## The problem
@@ -231,7 +235,7 @@ scripts/
   analyze.ts               Runs the engine over every dataset, prints recall/FPR
   explain-demo.ts          Exercises the explainer + guard self-test
 supabase/migrations/       cases + case_events schema, enum, trigger, RLS
-data/                      Generated datasets (git-ignored output of `npm run generate`)
+data/                      Generated, tracked runtime sample datasets (43 files)
 ```
 
 ## Documentation

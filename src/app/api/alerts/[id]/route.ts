@@ -14,14 +14,15 @@ const explanationCache = new Map<string, Explanation>();
 // carries the reason so the UI degrades instead of crashing.
 export async function GET(_req: Request, ctx: Ctx): Promise<Response> {
   const { id } = await ctx.params;
+  const persona = await currentPersona();
+  if (!persona) return Response.json({ error: "Sign in required" }, { status: 401 });
   const alert = findAlert(id);
   if (!alert) {
     return Response.json({ error: `Alert not found: ${id}` }, { status: 404 });
   }
 
   // Agents may only open their own signals (provider-boundary / least-privilege).
-  const persona = await currentPersona();
-  if (persona?.role === "agent" && alert.agentId !== persona.agentId) {
+  if (persona.role === "agent" && alert.agentId !== persona.agentId) {
     return Response.json({ error: `Alert not found: ${id}` }, { status: 404 });
   }
 

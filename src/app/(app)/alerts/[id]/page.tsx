@@ -136,11 +136,9 @@ function AlertDetail({ data }: { data: DetailResponse }) {
             <SeverityBadge severity={alert.severity} />
             <ProviderTag provider={alert.provider} />
           </div>
-          {confidence.level === "reduced" ? (
-            <div className="mt-3">
-              <ConfidenceBadge />
-            </div>
-          ) : null}
+          <div className="mt-3">
+            <ConfidenceBadge level={confidence.level} />
+          </div>
           <dl className="mt-4 space-y-3 text-sm">
             <Row label="Agent" value={<span className="tnum">{alert.agentId}</span>} />
             <Row label="Area" value={agentArea(alert.agentId)} />
@@ -212,15 +210,7 @@ function PromotePanel({ alert }: { alert: AlertView }) {
       const res = await fetch("/api/cases", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          type: alert.type,
-          agentId: alert.agentId,
-          provider: alert.provider,
-          severity: alert.severity,
-          windowStart: alert.windowStart,
-          windowEnd: alert.windowEnd,
-          evidence: alert.evidence,
-        }),
+        body: JSON.stringify({ alertId: alert.id }),
       });
       const body = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(body?.error || `Promote failed (${res.status})`);

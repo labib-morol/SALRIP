@@ -1,6 +1,6 @@
 import type { AlertType, Provider } from "@/lib/analytics/types.ts";
 import type { CaseStatus } from "@/lib/cases/types.ts";
-import { PROVIDER_META, SEVERITY_META, alertTypeLabel, type Severity } from "@/lib/display.ts";
+import { PROVIDER_META, SEVERITY_META, alertTypeLabel, type ConfidenceLevel, type Severity } from "@/lib/display.ts";
 
 /**
  * Three categorical channels, kept visually distinct on purpose:
@@ -77,24 +77,31 @@ export function AlertTypeLabel({ type, className }: { type: AlertType; className
   return <span className={className}>{alertTypeLabel(type)}</span>;
 }
 
-/**
- * Reliability marker. Only rendered when confidence is reduced (a high-confidence
- * alert needs no badge) — a striped amber pill that reads as a caveat, visually
- * distinct from the solid severity badge and the outlined status pill.
- */
-export function ConfidenceBadge({ compact = false }: { compact?: boolean }) {
+/** Reliability marker, explicit for both normal and reduced-confidence signals. */
+export function ConfidenceBadge({
+  level = "reduced",
+  compact = false,
+}: {
+  level?: ConfidenceLevel;
+  compact?: boolean;
+}) {
+  const reduced = level === "reduced";
   return (
     <span
       className={`inline-flex items-center gap-1.5 rounded-full border font-semibold uppercase tracking-wide ${
         compact ? "px-1.5 py-0.5 text-[11px]" : "px-2.5 py-1 text-[11px]"
       }`}
-      style={{ color: "var(--sev-med)", borderColor: "var(--sev-med)", background: "var(--sev-med-soft)" }}
-      title="Provider data was late or conflicting during this window"
+      style={
+        reduced
+          ? { color: "var(--sev-med)", borderColor: "var(--sev-med)", background: "var(--sev-med-soft)" }
+          : { color: "var(--ink-2)", borderColor: "var(--border-strong)", background: "var(--surface-2)" }
+      }
+      title={reduced ? "Provider data was late or conflicting during this window" : "Provider data is consistent for this window"}
     >
       <span aria-hidden className="text-[0.85em] leading-none">
-        ◑
+        {reduced ? "◑" : "●"}
       </span>
-      Reduced confidence
+      {reduced ? "Reduced confidence" : "High confidence"}
     </span>
   );
 }

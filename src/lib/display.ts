@@ -41,6 +41,20 @@ export function alertTypeLabel(type: AlertType): string {
   return ALERT_TYPE_META[type]?.label ?? "Activity to Review";
 }
 
+/** Safe, provider-specific human review step used in case routing. */
+export function reviewRecommendation(type: AlertType, provider: Provider): string {
+  switch (type) {
+    case "LIQUIDITY_DRAIN":
+      return `Confirm the ${provider} balance with the provider liaison, then coordinate a float top-up before the forecast window.`;
+    case "SHARED_CASH_SHORTAGE":
+      return "Confirm physical cash on hand and coordinate cash readiness across both provider queues.";
+    case "STALE_FEED":
+      return `Reconcile the delayed ${provider} feed with provider records before relying on the displayed balance.`;
+    case "FRAUD_BURST":
+      return `Review the transaction evidence with the ${provider} liaison and agent; do not block or accuse automatically.`;
+  }
+}
+
 // ── Confidence ───────────────────────────────────────────────────────────────
 // A reliability signal for the analyst: not every alert is measured on equally
 // firm ground. A STALE_FEED alert (and anything whose reconciliation `conflict`
